@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre')->nullable();
             $table->boolean('estado')->default(true);
-            $table->dateTime('fecha')->nullable()->default(new DateTime());
+            $table->dateTime('fecha')->nullable();
             $table->string('ganador')->nullable();
             $table->unsignedInteger('resultado_final')->default(0);
             $table->unsignedBigInteger('estudiante_creador_id');
