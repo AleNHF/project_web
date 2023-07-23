@@ -80,7 +80,7 @@
         </div>
         <!-- End Logo -->
 
-        <div class="search-bar">
+        <div class="search-bar" data-bs-theme="light">
             <form class="search-form d-flex align-items-center" method="POST" action="#">
                 <input type="text" name="query" placeholder="Search" title="Enter search keyword">
                 <button type="submit" title="Search"><i class="bi bi-search"></i></button>
@@ -199,7 +199,7 @@
                 @endguest
 
                 <!-- Dark/Light Mode Nav -->
-                <li class="nav-item dropdown pe-3" data-bs-theme="dark">
+                <li class="nav-item dropdown pe-3" data-bs-theme="light">
                     <button class="btn btn-link nav-link py-1 px-0 px-lg-1 dropdown-toggle d-flex align-items-center"
                         id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
                         data-bs-display="static" aria-label="Toggle theme (auto)">
