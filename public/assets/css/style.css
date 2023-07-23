@@ -104,7 +104,7 @@ h6 {
 # Override some default Bootstrap stylings
 --------------------------------------------------------------*/
 /* Dropdown menus */
-.dropdown-menu {
+/* .dropdown-menu {
   border-radius: 4px;
   padding: 10px 0;
   animation-name: dropdown-animate;
@@ -178,7 +178,7 @@ h6 {
   0% {
     opacity: 0;
   }
-}
+} */
 
 /* Light Backgrounds */
 .bg-primary-light {
@@ -567,7 +567,7 @@ h6 {
   top: 8px !important;
 }
 
-.header-nav .profile .dropdown-header h6 {
+/* .header-nav .profile .dropdown-header h6 {
   font-size: 18px;
   margin-bottom: 0;
   font-weight: 600;
@@ -592,7 +592,7 @@ h6 {
 
 .header-nav .profile .dropdown-item:hover {
   background-color: #f6f9ff;
-}
+} */
 
 /*--------------------------------------------------------------
 # Sidebar
