@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\EstudianteController;
+use App\Http\Controllers\DocenteController;
+use App\Http\Controllers\PreguntaController;
+use App\Http\Controllers\AdministrativoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +22,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('users', App\Http\Controllers\UserController::class);
-//Route::resource('estudiante', EstudianteController::class);
-
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Rutas protegidas con el middleware 'auth'
+Route::middleware('auth')->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('users', UserController::class);
+    Route::resource('estudiantes', EstudianteController::class);
+    Route::resource('docentes', DocenteController::class);
+    Route::resource('administrativos', AdministrativoController::class);
+    Route::resource('preguntas', PreguntaController::class);
+});
