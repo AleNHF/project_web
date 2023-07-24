@@ -17,20 +17,20 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="./assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="./assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="./assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="./assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="./assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/quill/quill.snow.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/quill/quill.bubble.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/simple-datatables/style.css')}}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <script src="./assets/js/index.js"></script>
+    <script src="{{ asset('assets/js/index.js')}}"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -261,87 +261,44 @@
             <ul class="sidebar-nav" id="sidebar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link " href="index.html">
+                    <a class="nav-link " href="{{ route('home') }}">
                         <i class="bi bi-grid"></i>
                         <span>Dashboard</span>
                     </a>
                 </li><!-- End Dashboard Nav -->
 
                 <li class="nav-item">
+                    <a class="nav-link collapsed" href="users-profile.html">
+                        <i class="bi bi-person"></i>
+                        <span>Perfil</span>
+                    </a>
+                </li><!-- End Profile Page Nav -->
+
+                <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
                         href="#">
-                        <i class="bi bi-menu-button-wide"></i><span>Usuarios</span><i
+                        <i class="bi bi-menu-button-wide"></i><span>Gestionar Usuarios</span><i
                             class="bi bi-chevron-down ms-auto"></i>
                     </a>
                     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="components-alerts.html">
-                                <i class="bi bi-circle"></i><span>Alerts</span>
+                            <a href="{{ route('users.index') }}">
+                                <i class="bi bi-circle"></i><span>Usuarios</span>
                             </a>
                         </li>
                         <li>
-                            <a href="components-accordion.html">
-                                <i class="bi bi-circle"></i><span>Accordion</span>
+                            <a href="{{ route('estudiantes.index') }}">
+                                <i class="bi bi-circle"></i><span>Estudiantes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="components-badges.html">
-                                <i class="bi bi-circle"></i><span>Badges</span>
+                            <a href="{{ route('docentes.index') }}">
+                                <i class="bi bi-circle"></i><span>Docentes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="components-breadcrumbs.html">
-                                <i class="bi bi-circle"></i><span>Breadcrumbs</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-buttons.html">
-                                <i class="bi bi-circle"></i><span>Buttons</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-cards.html">
-                                <i class="bi bi-circle"></i><span>Cards</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-carousel.html">
-                                <i class="bi bi-circle"></i><span>Carousel</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-list-group.html">
-                                <i class="bi bi-circle"></i><span>List group</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-modal.html">
-                                <i class="bi bi-circle"></i><span>Modal</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-tabs.html">
-                                <i class="bi bi-circle"></i><span>Tabs</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-pagination.html">
-                                <i class="bi bi-circle"></i><span>Pagination</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-progress.html">
-                                <i class="bi bi-circle"></i><span>Progress</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-spinners.html">
-                                <i class="bi bi-circle"></i><span>Spinners</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-tooltips.html">
-                                <i class="bi bi-circle"></i><span>Tooltips</span>
+                            <a href="{{ route('administrativos.index') }}">
+                                <i class="bi bi-circle"></i><span>Administrativos</span>
                             </a>
                         </li>
                     </ul>
@@ -349,80 +306,60 @@
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-journal-text"></i><span>Preguntas</span><i class="bi bi-chevron-down ms-auto"></i>
+                        <i class="bi bi-journal-text"></i><span>Gestionar Preguntas</span><i class="bi bi-chevron-down ms-auto"></i>
                     </a>
                     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
                             <a href="forms-elements.html">
-                                <i class="bi bi-circle"></i><span>Form Elements</span>
+                                <i class="bi bi-circle"></i><span>Preguntas</span>
                             </a>
                         </li>
                         <li>
                             <a href="forms-layouts.html">
-                                <i class="bi bi-circle"></i><span>Form Layouts</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="forms-editors.html">
-                                <i class="bi bi-circle"></i><span>Form Editors</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="forms-validation.html">
-                                <i class="bi bi-circle"></i><span>Form Validation</span>
+                                <i class="bi bi-circle"></i><span>Respuestas</span>
                             </a>
                         </li>
                     </ul>
                 </li><!-- End Preguntas Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-layout-text-window-reverse"></i><span>Docentes</span><i
-                            class="bi bi-chevron-down ms-auto"></i>
+                    <a class="nav-link collapsed" href="{{ route('docentes.index')}}">
+                        <i class="bi bi-layout-text-window-reverse"></i>
+                        <span>Gestionar Docentes</span>
                     </a>
-                    <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                        <li>
-                            <a href="tables-general.html">
-                                <i class="bi bi-circle"></i><span>General Tables</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tables-data.html">
-                                <i class="bi bi-circle"></i><span>Data Tables</span>
-                            </a>
-                        </li>
-                    </ul>
                 </li><!-- End Docentes Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-bar-chart"></i><span>Reportes</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <a class="nav-link collapsed" href="#">
+                        <i class="bi bi-bar-chart"></i><span>Gestionar Desafíos</span>
                     </a>
-                    <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                </li><!-- End Desafio Nav -->
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
+                        href="#">
+                        <i class="bi bi-menu-button-wide"></i><span>Gestionar Ranking</span><i
+                            class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="charts-chartjs.html">
-                                <i class="bi bi-circle"></i><span>Chart.js</span>
+                            <a href="#">
+                                <i class="bi bi-circle"></i><span>General</span>
                             </a>
                         </li>
                         <li>
-                            <a href="charts-apexcharts.html">
-                                <i class="bi bi-circle"></i><span>ApexCharts</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="charts-echarts.html">
-                                <i class="bi bi-circle"></i><span>ECharts</span>
+                            <a href="#">
+                                <i class="bi bi-circle"></i><span>Colegio</span>
                             </a>
                         </li>
                     </ul>
-                </li><!-- End Reportes Nav -->
+                </li><!-- End Ranking Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="users-profile.html">
-                        <i class="bi bi-person"></i>
-                        <span>Profile</span>
+                    <a class="nav-link collapsed" href="#">
+                        <i class="bi bi-bar-chart"></i><span>Reportes y Estadísticas</span>
                     </a>
-                </li><!-- End Profile Page Nav -->
+                </li><!-- End Reportes Nav -->
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="{{ route('logout') }}"
@@ -462,17 +399,17 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="./assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="./assets/vendor/echarts/echarts.min.js"></script>
-    <script src="./assets/vendor/quill/quill.min.js"></script>
-    <script src="./assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="./assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="./assets/vendor/php-email-form/validate.js"></script>
+    <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/chart.js/chart.umd.js')}}"></script>
+    <script src="{{ asset('assets/vendor/echarts/echarts.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/quill/quill.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/simple-datatables/simple-datatables.js')}}"></script>
+    <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
 
     <!-- Template Main JS File -->
-    <script src="./assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js')}}"></script>
 </body>
 
 </html>
