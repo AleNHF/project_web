@@ -28,6 +28,15 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+    public function redirectPath()
+    {
+        if (auth()->user()->tipo == 'E') {
+            return '/game';
+        }
+
+        return '/home';
+    }
+
     /**
      * Create a new controller instance.
      *

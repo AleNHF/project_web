@@ -24,11 +24,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 // Rutas protegidas con el middleware 'auth'
 Route::middleware('auth')->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/game', [App\Http\Controllers\HomeController::class, 'game'])->name('game');
     Route::resource('users', UserController::class);
     Route::resource('estudiantes', EstudianteController::class);
     Route::resource('docentes', DocenteController::class);
