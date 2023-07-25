@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    User
+    Usuario
 @endsection
 
 @section('content')
@@ -9,12 +9,12 @@
         <h1>Gestionar Usuarios</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('users.index')}}">Usuarios</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('users.index') }}">Usuarios</a></li>
                 <li class="breadcrumb-item active"></li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
-    
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -23,13 +23,13 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('User') }}
+                                {{ __('Usuarios') }}
                             </span>
 
                             <div class="float-right">
                                 <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm float-right"
                                     data-placement="left">
-                                    {{ __('Create New') }}
+                                    {{ __('Crear nuevo') }}
                                 </a>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Telefono</th>
-                                        <th>Tipo</th>
+                                        <th>Rol</th>
 
                                         <th></th>
                                     </tr>
@@ -63,20 +63,26 @@
                                             <td>{{ $user->name }}</td>
                                             <td>{{ $user->email }}</td>
                                             <td>{{ $user->telefono }}</td>
-                                            <td>{{ $user->tipo }}</td>
+                                            <td>
+                                                @if (!empty($user->getRoleNames()))
+                                                    @foreach ($user->getRoleNames() as $rolNombre)
+                                                        <h5><span class="badge badge-dark">{{ $rolNombre }}</span></h5>
+                                                    @endforeach
+                                                @endif
+                                            </td>
 
                                             <td>
                                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary "
                                                         href="{{ route('users.show', $user->id) }}"><i
-                                                            class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                            class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
                                                     <a class="btn btn-sm btn-success"
                                                         href="{{ route('users.edit', $user->id) }}"><i
-                                                            class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                            class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i
-                                                            class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                            class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
                                             </td>
                                         </tr>
