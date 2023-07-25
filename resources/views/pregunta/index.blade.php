@@ -9,6 +9,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
+                    @if (auth()->user()->tipo === 'D')
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
@@ -23,8 +24,14 @@
                               </div>
                         </div>
                     </div>
+                    @endif
                     @if ($message = Session::get('success'))
                         <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
+                    @if ($message = Session::get('danger'))
+                        <div class="alert alert-danger">
                             <p>{{ $message }}</p>
                         </div>
                     @endif
@@ -53,10 +60,13 @@
                                             <td>
                                                 <form action="{{ route('preguntas.destroy',$pregunta->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('preguntas.show',$pregunta->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    @if (auth()->user()->tipo === 'D')
                                                     <a class="btn btn-sm btn-success" href="{{ route('preguntas.edit',$pregunta->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                    
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    @endif
                                                 </form>
                                             </td>
                                         </tr>

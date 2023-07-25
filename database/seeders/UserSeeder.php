@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Docente;
 use App\Models\Administrativo;
 
+
 class UserSeeder extends Seeder
 {
     /**
