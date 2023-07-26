@@ -14,13 +14,28 @@ class RespuestaSeeder extends Seeder
     public function run(): void
     {
         Respuesta::create([
-            'texto'=>'El lenguaje es un sistema de comunicación que utiliza símbolos, signos y palabras para expresar y transmitir ideas, pensamientos, emociones e información entre individuos.',
-            'esCorrecta'=>1,
+            'texto'=>'hoy',
+            'esCorrecta'=>false,
             'pregunta_id'=>'1'
         ]);
         Respuesta::create([
-            'texto'=>'Un pronombre es una palabra que reemplaza o sustituye a un sustantivo para evitar su repetición',
-            'esCorrecta'=>0,
+            'texto'=>'dio',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'1'
+        ]);
+        Respuesta::create([
+            'texto'=>'que',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'1'
+        ]);
+        Respuesta::create([
+            'texto'=>'fue',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'1'
+        ]);
+        Respuesta::create([
+            'texto'=>'leo',
+            'esCorrecta'=>true,
             'pregunta_id'=>'1'
         ]);
         Respuesta::create([

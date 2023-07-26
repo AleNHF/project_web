@@ -14,16 +14,20 @@ class AreaSeeder extends Seeder
     public function run(): void
     {
         Area::create([
-            'nombre'=>'Lenguaje',
-            'puntaje'=>'10'
+            'nombre'=> 'Lenguaje',
+            'puntaje'=> 30
         ]);
         Area::create([
-            'nombre'=>'Historia',
-            'puntaje'=>'10'
+            'nombre'=> 'Historia',
+            'puntaje'=> 20
         ]);
         Area::create([
-            'nombre'=>'Psicologia',
-            'puntaje'=>'30'
+            'nombre'=> 'Psicologia',
+            'puntaje'=> 20
+        ]);
+        Area::create([
+            'nombre' => 'Matemáticas',
+            'puntaje' => 30
         ]);
     }
 }
