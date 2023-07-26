@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Administrativo;
+use App\Models\Docente;
+use App\Models\Estudiante;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
 
 /**
  * Class UserController
@@ -32,7 +37,13 @@ class UserController extends Controller
     public function create()
     {
         $user = new User();
-        return view('user.create', compact('user'));
+        $docente = new Docente();
+        $administrativo = new Administrativo();
+        $estudiante = new Estudiante();
+        $roles = Role::pluck('name', 'name')->all();
+        $userRole = $user->roles->pluck('name', 'name')->all();
+
+        return view('user.create', compact('user', 'roles', 'userRole', 'docente', 'administrativo', 'estudiante'));
     }
 
     /**
@@ -43,12 +54,47 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(User::$rules);
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'roles' => 'required'
+        ]);
 
-        $user = User::create($request->all());
+        $input = $request->all();
+
+        $user = User::create([
+            'name' => $input['name'],
+            'email' => $input['email'],
+            'password' => bcrypt('grup006'),
+            'ci' => $input['ci'],
+            'telefono' => $input['telefono']
+        ]);
+        $user->assignRole($request->input('roles'));
+
+        if ($request->input('roles') == 'docente') {
+            $user->tipo = 'D';
+            $user->save();
+
+            //Crear al docente
+            Docente::create([
+                'especialidad' => $input['especialidad'],
+                'usuario_id' => $user->id
+            ]);
+        }
+
+        if ($request->input('roles') == 'administrativo') {
+            $user->tipo = 'A';
+            $user->save();
+
+            //Crear administrativo
+            Administrativo::create([
+                'cargo' => $input['cargo'],
+                'usuario_id' => $user->id
+            ]);
+        }
 
         return redirect()->route('users.index')
-            ->with('success', 'User created successfully.');
+            ->with('success', 'Usuario creado correctamente.');
     }
 
     /**
@@ -73,8 +119,13 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
+        $docente = Docente::where('usuario_id', $user->id)->first();
+        $administrativo = Administrativo::where('usuario_id', $user->id)->first();
+        $estudiante = Estudiante::where('usuario_id', $user->id)->first();
+        $roles = Role::pluck('name', 'name')->all();
+        $userRole = $user->roles->pluck('name', 'name')->all();
 
-        return view('user.edit', compact('user'));
+        return view('user.edit', compact('user', 'roles', 'userRole', 'docente', 'administrativo', 'estudiante'));
     }
 
     /**
@@ -86,12 +137,19 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        request()->validate(User::$rules);
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,'.$user->id,
+            'roles' => 'required'
+        ]);
 
         $user->update($request->all());
 
+        DB::table('model_has_roles')->where('model_id', $user->id)->delete();
+        $user->assignRole($request->input('roles'));
+
         return redirect()->route('users.index')
-            ->with('success', 'User updated successfully');
+            ->with('success', 'Usuario actualizado correctamente');
     }
 
     /**
@@ -104,6 +162,6 @@ class UserController extends Controller
         $user = User::find($id)->delete();
 
         return redirect()->route('users.index')
-            ->with('success', 'User deleted successfully');
+            ->with('success', 'Usuario eliminado correctamente');
     }
 }

@@ -1370,3 +1370,13 @@ h6 {
 .hero .icon-box:hover .icon {
     color: #fff;
 }
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px; /* Ajusta el valor para cambiar la curvatura del badge */
+    background-color: #0c0b0b; /* Color de fondo del badge */
+    color: #FFFFFF; /* Color del texto del badge */
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de fuente */
+  }
