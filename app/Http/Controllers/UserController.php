@@ -6,6 +6,7 @@ use App\Models\Administrativo;
 use App\Models\Docente;
 use App\Models\Estudiante;
 use App\Models\User;
+use App\Models\PageVisit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
@@ -24,8 +25,10 @@ class UserController extends Controller
     public function index()
     {
         $users = User::paginate();
+        $visits = PageVisit::where('page_slug', 'users')->value('visits');
 
-        return view('user.index', compact('users'))
+        dd($visits);
+        return view('user.index', compact('users', 'visits'))
             ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
 
