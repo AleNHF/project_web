@@ -315,7 +315,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="forms-layouts.html">
+                            <a href="{{ route('respuestas.index') }}">
                                 <i class="bi bi-circle"></i><span>Respuestas</span>
                             </a>
                         </li>

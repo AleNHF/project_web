@@ -6,6 +6,7 @@ use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\AdministrativoController;
+use App\Http\Controllers\RespuestaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +34,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('docentes', DocenteController::class);
     Route::resource('administrativos', AdministrativoController::class);
     Route::resource('preguntas', PreguntaController::class);
+    Route::resource('respuestas', RespuestaController::class);
 });

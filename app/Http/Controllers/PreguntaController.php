@@ -17,7 +17,7 @@ class PreguntaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { 
         $preguntas = Pregunta::paginate();
 
         return view('pregunta.index', compact('preguntas'))
@@ -31,8 +31,11 @@ class PreguntaController extends Controller
      */
     public function create()
     {
-        $pregunta = new Pregunta();
-        return view('pregunta.create', compact('pregunta'));
+        if(auth()->user()->tipo === 'D') {
+            $pregunta = new Pregunta();
+            return view('pregunta.create', compact('pregunta'));
+        }
+        return redirect()->route('preguntas.index')->with('danger', 'No tiene privilegios para realizar esta accion.');
     }
 
     /**
@@ -59,9 +62,11 @@ class PreguntaController extends Controller
      */
     public function show($id)
     {
-        $pregunta = Pregunta::find($id);
 
-        return view('pregunta.show', compact('pregunta'));
+            $pregunta = Pregunta::find($id);
+
+            return view('pregunta.show', compact('pregunta'));
+
     }
 
     /**
@@ -72,9 +77,12 @@ class PreguntaController extends Controller
      */
     public function edit($id)
     {
-        $pregunta = Pregunta::find($id);
+        if(auth()->user()->tipo === 'D') {
+            $pregunta = Pregunta::find($id);
 
-        return view('pregunta.edit', compact('pregunta'));
+            return view('pregunta.edit', compact('pregunta'));
+        }
+        return redirect()->route('preguntas.index')->with('danger', 'No tiene privilegios para realizar esta accion.');
     }
 
     /**
@@ -101,9 +109,12 @@ class PreguntaController extends Controller
      */
     public function destroy($id)
     {
-        $pregunta = Pregunta::find($id)->delete();
+        if(auth()->user()->tipo === 'D') {
+            $pregunta = Pregunta::find($id)->delete();
 
-        return redirect()->route('preguntas.index')
-            ->with('success', 'Pregunta deleted successfully');
+            return redirect()->route('preguntas.index')
+                ->with('success', 'Pregunta deleted successfully');
+        }
+        return redirect()->route('preguntas.index')->with('danger', 'No tiene privilegios para realizar esta accion.');
     }
 }

@@ -9,6 +9,7 @@ use App\Models\Docente;
 use App\Models\Administrativo;
 use App\Models\Estudiante;
 
+
 class UserSeeder extends Seeder
 {
     /**
