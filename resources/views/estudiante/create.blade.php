@@ -5,6 +5,16 @@
 @endsection
 
 @section('content')
+    <div class="pagetitle">
+        <h1>Gestionar Estudiantes</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('estudiantes.index') }}">Estudiantes</a></li>
+                <li class="breadcrumb-item active">Crear</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -16,7 +26,8 @@
                         <span class="card-title">{{ __('Create') }} Estudiante</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('estudiantes.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('estudiantes.store') }}" role="form"
+                            enctype="multipart/form-data">
                             @csrf
 
                             @include('estudiante.form')

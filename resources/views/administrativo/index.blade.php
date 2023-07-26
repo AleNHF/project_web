@@ -5,6 +5,15 @@
 @endsection
 
 @section('content')
+    <div class="pagetitle">
+        <h1>Gestionar Administrativos</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('administrativos.index') }}">Administrativos</a></li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -16,11 +25,12 @@
                                 {{ __('Administrativo') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('administrativos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                            {{-- <div class="float-right">
+                                <a href="{{ route('administrativos.create') }}" class="btn btn-primary btn-sm float-right"
+                                    data-placement="left">
+                                    {{ __('Create New') }}
                                 </a>
-                              </div>
+                            </div> --}}
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -35,9 +45,9 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
-										<th>Cargo</th>
-										<th>Usuario Id</th>
+
+                                        <th>Cargo</th>
+                                        <th>Usuario</th>
 
                                         <th></th>
                                     </tr>
@@ -46,17 +56,23 @@
                                     @foreach ($administrativos as $administrativo)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $administrativo->cargo }}</td>
-											<td>{{ $administrativo->usuario_id }}</td>
+
+                                            <td>{{ $administrativo->cargo }}</td>
+                                            <td>{{ $administrativo->user->name }}</td>
 
                                             <td>
-                                                <form action="{{ route('administrativos.destroy',$administrativo->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('administrativos.show',$administrativo->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('administrativos.edit',$administrativo->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('administrativos.destroy', $administrativo->id) }}"
+                                                    method="POST">
+                                                    {{-- <a class="btn btn-sm btn-primary "
+                                                        href="{{ route('administrativos.show', $administrativo->id) }}"><i
+                                                            class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success"
+                                                        href="{{ route('administrativos.edit', $administrativo->id) }}"><i
+                                                            class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a> --}}
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                                            class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
                                             </td>
                                         </tr>

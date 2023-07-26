@@ -45,7 +45,7 @@
                 <h5>Docente</h5>
                 <div class="form-group" style="margin-bottom: 10px">
                     {{ Form::label('Especialidad') }}
-                    {{ Form::text('especialidad', $docente->especialidad, ['class' => 'form-control' . ($errors->has('especialidad') ? ' is-invalid' : ''), 'placeholder' => 'Especialidad']) }}
+                    {{ Form::text('especialidad', $docente->especialidad ?? null, ['class' => 'form-control' . ($errors->has('especialidad') ? ' is-invalid' : ''), 'placeholder' => 'Especialidad']) }}
                     {!! $errors->first('especialidad', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
             </div>
@@ -53,44 +53,8 @@
                 <h5>Administrativo</h5>
                 <div class="form-group" style="margin-bottom: 10px">
                     {{ Form::label('Cargo') }}
-                    {{ Form::text('cargo', $administrativo->cargo, ['class' => 'form-control' . ($errors->has('cargo') ? ' is-invalid' : ''), 'placeholder' => 'Cargo ocupado']) }}
+                    {{ Form::text('cargo', $administrativo->cargo ?? null, ['class' => 'form-control' . ($errors->has('cargo') ? ' is-invalid' : ''), 'placeholder' => 'Cargo ocupado']) }}
                     {!! $errors->first('cargo', '<div class="invalid-feedback">:message</div>') !!}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <h5>Estudiante</h5>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group" style="margin-bottom: 10px">
-                    {{ Form::label('Colegio') }}
-                    {{ Form::text('colegio', $estudiante->colegio, ['class' => 'form-control' . ($errors->has('colegio') ? ' is-invalid' : ''), 'placeholder' => 'Colegio']) }}
-                    {!! $errors->first('colegio', '<div class="invalid-feedback">:message</div>') !!}
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group" style="margin-bottom: 10px">
-                    {{ Form::label('grado', 'Grado') }}
-                    {{ Form::select('grado', ['' => 'Escoge un grado...', '4' => '4to grado', '5' => '5to grado', '6' => '6to grado'], null, ['class' => 'form-select']) }}
-                    {!! $errors->first('grado', '<div class="invalid-feedback">:message</div>') !!}
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group" style="margin-bottom: 10px">
-                    {{ Form::label('carreraInteres', 'Carrera de Interés') }}
-                    {{ Form::select(
-                        'carreraInteres',
-                        [
-                            '' => 'Escoge una carrera...',
-                            'Administracion' => 'Administración de Empresas',
-                            'Comercio' => 'Comercio Internacional',
-                            'Economia' => 'Economía',
-                            'IngenieriaComercial' => 'Ingeniería Comercial',
-                            'Financiera' => 'Ingeniería Financiera',
-                        ],
-                        null,
-                        ['class' => 'form-select'],
-                    ) }}
-                    {!! $errors->first('carreraInteres', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
             </div>
         </div>

@@ -82,20 +82,7 @@ class UserController extends Controller
             ]);
         }
 
-        if ($request->input('roles') == 'estudiante') {
-            $user->tipo = 'E';
-            $user->save();
-
-            dd($input);
-
-            //Crear al estudiante
-            Estudiante::create([
-                'colegio' => $input['colegio'],
-                'grado' => $input['grado'],
-                'carreraInteres' => $input['carreraInteres'],
-                'usuario_id' => $user->id
-            ]);
-        } else {
+        if ($request->input('roles') == 'administrativo') {
             $user->tipo = 'A';
             $user->save();
 

@@ -10,7 +10,6 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('users.index') }}">Usuarios</a></li>
-                <li class="breadcrumb-item active"></li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -73,9 +72,9 @@
 
                                             <td>
                                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary "
+                                                    {{-- <a class="btn btn-sm btn-primary "
                                                         href="{{ route('users.show', $user->id) }}"><i
-                                                            class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
+                                                            class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a> --}}
                                                     <a class="btn btn-sm btn-success"
                                                         href="{{ route('users.edit', $user->id) }}"><i
                                                             class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
