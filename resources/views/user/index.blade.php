@@ -95,4 +95,8 @@
             </div>
         </div>
     </div>
+
+    <div>
+        <p>Esta página ha sido visitada [{{ $visits }}] veces.</p>
+    </div>
 @endsection

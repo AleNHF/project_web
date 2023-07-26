@@ -26,7 +26,7 @@ Route::get('/', function () {
 Auth::routes();
 
 // Rutas protegidas con el middleware 'auth'
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'page.visit'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/game', [App\Http\Controllers\HomeController::class, 'game'])->name('game');
     Route::resource('users', UserController::class);
