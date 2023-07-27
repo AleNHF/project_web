@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             AreaSeeder::class,
             PreguntaSeeder::class,
             ModoSeeder::class,
-            RespuestaSeeder::class
+            RespuestaSeeder::class,
+            PaginasSeeder::class
         ]);
     }
 }

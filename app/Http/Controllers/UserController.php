@@ -27,7 +27,6 @@ class UserController extends Controller
         $users = User::paginate();
         $visits = PageVisit::where('page_slug', 'users')->value('visits');
 
-        dd($visits);
         return view('user.index', compact('users', 'visits'))
             ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
@@ -45,8 +44,9 @@ class UserController extends Controller
         $estudiante = new Estudiante();
         $roles = Role::pluck('name', 'name')->all();
         $userRole = $user->roles->pluck('name', 'name')->all();
+        $visits = PageVisit::where('page_slug', 'users/create')->value('visits');
 
-        return view('user.create', compact('user', 'roles', 'userRole', 'docente', 'administrativo', 'estudiante'));
+        return view('user.create', compact('user', 'roles', 'userRole', 'docente', 'administrativo', 'estudiante', 'visits'));
     }
 
     /**

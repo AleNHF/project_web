@@ -42,7 +42,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 										<th>Texto</th>
 										<th>Area Id</th>
 
@@ -53,7 +53,7 @@
                                     @foreach ($preguntas as $pregunta)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 											<td>{{ $pregunta->texto }}</td>
 											<td>{{ $pregunta->area_id }}</td>
 
@@ -62,7 +62,7 @@
                                                     <a class="btn btn-sm btn-primary " href="{{ route('preguntas.show',$pregunta->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
                                                     @if (auth()->user()->tipo === 'D')
                                                     <a class="btn btn-sm btn-success" href="{{ route('preguntas.edit',$pregunta->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
-                                                    
+
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
@@ -79,5 +79,10 @@
                 {!! $preguntas->links() !!}
             </div>
         </div>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-danger disabled">Visitas</button>
+        <button type="button" class="btn btn-warning disabled">{{ $visits }}</button>
     </div>
 @endsection

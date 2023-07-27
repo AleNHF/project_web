@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Administrativo;
+use App\Models\PageVisit;
 use Illuminate\Http\Request;
 
 /**
@@ -19,8 +20,9 @@ class AdministrativoController extends Controller
     public function index()
     {
         $administrativos = Administrativo::paginate();
+        $visits = PageVisit::where('page_slug', 'administrativos')->value('visits');
 
-        return view('administrativo.index', compact('administrativos'))
+        return view('administrativo.index', compact('administrativos', 'visits'))
             ->with('i', (request()->input('page', 1) - 1) * $administrativos->perPage());
     }
 
@@ -32,7 +34,9 @@ class AdministrativoController extends Controller
     public function create()
     {
         $administrativo = new Administrativo();
-        return view('administrativo.create', compact('administrativo'));
+        $visits = PageVisit::where('page_slug', 'administrativos/create')->value('visits');
+
+        return view('administrativo.create', compact('administrativo', 'visits'));
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\PageVisit;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\DocenteController;
@@ -20,7 +21,9 @@ use App\Http\Controllers\JueguitoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $visits = PageVisit::where('page_slug', '/')->value('visits');
+
+    return view('welcome', compact('visits'));
 });
 
 Auth::routes();

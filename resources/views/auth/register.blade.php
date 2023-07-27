@@ -105,7 +105,7 @@
                                         <option value="Administracion">Administración de Empresas</option>
                                         <option value="Comercio">Comercio Internacional</option>
                                         <option value="Economia">Economía</option>
-                                        <option value="Comercio">Ingeniería Comercial</option>
+                                        <option value="Comercial">Ingeniería Comercial</option>
                                         <option value="Financiera">Ingeniería Financiera</option>
                                     </select>
                                 </div>

@@ -85,4 +85,9 @@
             </div>
         </div>
     </div>
+
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-danger disabled">Visitas</button>
+        <button type="button" class="btn btn-warning disabled">{{ $visits }}</button>
+    </div>
 @endsection
