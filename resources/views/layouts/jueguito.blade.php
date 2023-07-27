@@ -169,42 +169,6 @@
     <main id="main" class="main">
         @yield('content')
     </main>
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero">
-        <div class="container position-relative">
-            <div class="row gy-5" data-aos="fade-in">
-                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-                    <h2 style="font-size: 80px;">Test <span>EcoMinds</span></h2>
-                    <p style="font-size: 30px;">¡Juega y triunfa en la FCEE!</p>
-                      <h2 style="font-size: 60px; margin-top: 100px;">¿LISTO PARA EL DESAFÍO?</h2>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2">
-                    <img src="./assets/img/welcome-img.png" class="img-fluid" alt="" data-aos="zoom-out"
-                        data-aos-delay="100" style="width: 800px; height: 600px;">
-                </div>
-            </div>
-        </div>
-        <div class="icon-boxes position-relative">
-            <div class="container position-relative">
-                <div class="row gy-4 mt-5 justify-content-center">
-                   <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon-box">
-                            <h4 class="title" style="font-size: 36px; color: black; font-weight: bold; margin-bottom: 40px;">
-                            <a href="{{ route('interno') }}" class="stretched-link">INTERNO</a></h4>
-                            <div class="icon" color: white; display: flex; justify-content: center; align-items: center; height: 20px;">
-                                <p style="font-size: 30px; text-align: center; background-color: orange; color: white; padding: 10px; border-radius: 15px; box-shadow: 0px 0px 10px black;">Reta a tus compañeros<br>de colegio</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Icon Box -->
-                    <!--End Icon Box -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Hero Section -->
-
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
