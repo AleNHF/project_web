@@ -27,7 +27,6 @@ class UserController extends Controller
         $users = User::paginate();
         $visits = PageVisit::where('page_slug', 'users')->value('visits');
 
-        dd($visits);
         return view('user.index', compact('users', 'visits'))
             ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
