@@ -63,10 +63,5 @@ class Juego extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function user()
-    {
-        return $this->hasOne('App\Models\User', 'id', 'estudiante_jugador_id');
-    }
-    
 
 }

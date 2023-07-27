@@ -7,7 +7,7 @@ use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\AdministrativoController;
 use App\Http\Controllers\RespuestaController;
-
+use App\Http\Controllers\JueguitoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,4 +35,8 @@ Route::middleware(['auth', 'page.visit'])->group(function () {
     Route::resource('administrativos', AdministrativoController::class);
     Route::resource('preguntas', PreguntaController::class);
     Route::resource('respuestas', RespuestaController::class);
+    Route::get('/interno', [App\Http\Controllers\JueguitoController::class,'interno'])->name('interno');
+    Route::get('/jueguito/preguntas/{salaId}/{UserId}', [App\Http\Controllers\JueguitoController::class,'sala'])->name('sala');
+    Route::post('/jueguito/result', [App\Http\Controllers\JueguitoController::class,'guardar_respuestas'])->name('guardar_respuestas');
+
 });
