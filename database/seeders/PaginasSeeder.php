@@ -18,10 +18,10 @@ class PaginasSeeder extends Seeder
             'page_slug' => 'users'
         ]);
         PageVisit::create([
-            'page_slug' => 'users.create'
+            'page_slug' => 'users/create'
         ]);
         PageVisit::create([
-            'page_slug' => 'users.edit'
+            'page_slug' => 'users/edit'
         ]);
 
         //Vistas estudiantes
@@ -29,7 +29,7 @@ class PaginasSeeder extends Seeder
             'page_slug' => 'estudiantes'
         ]);
         PageVisit::create([
-            'page_slug' => 'estudiantes.create'
+            'page_slug' => 'estudiantes/create'
         ]);
 
         //Vistas docentes
@@ -38,11 +38,11 @@ class PaginasSeeder extends Seeder
         ]);
 
         PageVisit::create([
-            'page_slug' => 'docentes.create'
+            'page_slug' => 'docentes/create'
         ]);
 
         PageVisit::create([
-            'page_slug' => 'docentes.edit'
+            'page_slug' => 'docentes/edit'
         ]);
 
         //Vistas administrativos
@@ -56,20 +56,24 @@ class PaginasSeeder extends Seeder
         ]);
 
         PageVisit::create([
-            'page_slug' => 'preguntas.create'
+            'page_slug' => 'preguntas/create'
         ]);
 
         PageVisit::create([
-            'page_slug' => 'preguntas.edit'
+            'page_slug' => 'preguntas/edit'
+        ]);
+
+        PageVisit::create([
+            'page_slug' => 'preguntas/show'
         ]);
 
         // Vistas ranking
         PageVisit::create([
-            'page_slug' => 'ranking.general'
+            'page_slug' => 'ranking/general'
         ]);
 
         PageVisit::create([
-            'page_slug' => 'ranking.colegio'
+            'page_slug' => 'ranking/colegio'
         ]);
 
         //Vistas reportes
@@ -89,7 +93,7 @@ class PaginasSeeder extends Seeder
 
         //Vista welcome
         PageVisit::create([
-            'page_slug' => 'welcome'
+            'page_slug' => '/'
         ]);
     }
 }
