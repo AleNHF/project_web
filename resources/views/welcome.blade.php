@@ -254,6 +254,10 @@
     </section>
     <!-- End Hero Section -->
 
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-danger disabled">Visitas</button>
+        <button type="button" class="btn btn-warning disabled">{{ $visits }}</button>
+    </div>
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">

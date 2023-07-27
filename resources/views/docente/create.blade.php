@@ -27,4 +27,8 @@
             </div>
         </div>
     </section>
+
+    <div>
+        <p>Esta página ha sido visitada<h5><span class="badge badge-warning">{{ $visits }}</span></h5> veces.</p>
+    </div>
 @endsection

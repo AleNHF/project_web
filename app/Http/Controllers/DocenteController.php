@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Docente;
+use App\Models\PageVisit;
 use Illuminate\Http\Request;
 
 /**
@@ -19,8 +20,9 @@ class DocenteController extends Controller
     public function index()
     {
         $docentes = Docente::paginate();
+        $visits = PageVisit::where('page_slug', 'docentes')->value('visits');
 
-        return view('docente.index', compact('docentes'))
+        return view('docente.index', compact('docentes', 'visits'))
             ->with('i', (request()->input('page', 1) - 1) * $docentes->perPage());
     }
 
@@ -32,7 +34,9 @@ class DocenteController extends Controller
     public function create()
     {
         $docente = new Docente();
-        return view('docente.create', compact('docente'));
+        $visits = PageVisit::where('page_slug', 'docentes/create')->value('visits');
+
+        return view('docente.create', compact('docente', 'visits'));
     }
 
     /**

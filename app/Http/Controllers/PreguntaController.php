@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pregunta;
+use App\Models\PageVisit;
 use Illuminate\Http\Request;
 
 /**
@@ -17,10 +18,11 @@ class PreguntaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
+    {
         $preguntas = Pregunta::paginate();
+        $visits = PageVisit::where('page_slug', 'preguntas')->value('visits');
 
-        return view('pregunta.index', compact('preguntas'))
+        return view('pregunta.index', compact('preguntas', 'visits'))
             ->with('i', (request()->input('page', 1) - 1) * $preguntas->perPage());
     }
 
@@ -31,11 +33,10 @@ class PreguntaController extends Controller
      */
     public function create()
     {
-        if(auth()->user()->tipo === 'D') {
-            $pregunta = new Pregunta();
-            return view('pregunta.create', compact('pregunta'));
-        }
-        return redirect()->route('preguntas.index')->with('danger', 'No tiene privilegios para realizar esta accion.');
+        $pregunta = new Pregunta();
+        $visits = PageVisit::where('page_slug', 'preguntas/create')->value('visits');
+
+        return view('pregunta.create', compact('pregunta', 'visits'));
     }
 
     /**
@@ -62,11 +63,9 @@ class PreguntaController extends Controller
      */
     public function show($id)
     {
+        $pregunta = Pregunta::find($id);
 
-            $pregunta = Pregunta::find($id);
-
-            return view('pregunta.show', compact('pregunta'));
-
+        return view('pregunta.show', compact('pregunta'));
     }
 
     /**
@@ -77,12 +76,9 @@ class PreguntaController extends Controller
      */
     public function edit($id)
     {
-        if(auth()->user()->tipo === 'D') {
-            $pregunta = Pregunta::find($id);
+        $pregunta = Pregunta::find($id);
 
-            return view('pregunta.edit', compact('pregunta'));
-        }
-        return redirect()->route('preguntas.index')->with('danger', 'No tiene privilegios para realizar esta accion.');
+        return view('pregunta.edit', compact('pregunta'));
     }
 
     /**
@@ -109,12 +105,9 @@ class PreguntaController extends Controller
      */
     public function destroy($id)
     {
-        if(auth()->user()->tipo === 'D') {
-            $pregunta = Pregunta::find($id)->delete();
+        $pregunta = Pregunta::find($id)->delete();
 
-            return redirect()->route('preguntas.index')
+        return redirect()->route('preguntas.index')
                 ->with('success', 'Pregunta deleted successfully');
-        }
-        return redirect()->route('preguntas.index')->with('danger', 'No tiene privilegios para realizar esta accion.');
     }
 }

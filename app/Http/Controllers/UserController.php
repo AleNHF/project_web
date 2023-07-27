@@ -44,8 +44,9 @@ class UserController extends Controller
         $estudiante = new Estudiante();
         $roles = Role::pluck('name', 'name')->all();
         $userRole = $user->roles->pluck('name', 'name')->all();
+        $visits = PageVisit::where('page_slug', 'users/create')->value('visits');
 
-        return view('user.create', compact('user', 'roles', 'userRole', 'docente', 'administrativo', 'estudiante'));
+        return view('user.create', compact('user', 'roles', 'userRole', 'docente', 'administrativo', 'estudiante', 'visits'));
     }
 
     /**

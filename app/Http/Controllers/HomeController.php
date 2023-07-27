@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PageVisit;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $visits = PageVisit::where('page_slug', 'home')->value('visits');
+
+        return view('home', compact('visits'));
     }
 
     /**
@@ -33,6 +36,8 @@ class HomeController extends Controller
      */
     public function game()
     {
-        return view('game');
+        $visits = PageVisit::where('page_slug', 'game')->value('visits');
+
+        return view('game', compact('visits'));
     }
 }

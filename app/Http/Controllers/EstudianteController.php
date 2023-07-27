@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Estudiante;
+use App\Models\PageVisit;
 use Illuminate\Http\Request;
 
 /**
@@ -19,8 +20,9 @@ class EstudianteController extends Controller
     public function index()
     {
         $estudiantes = Estudiante::paginate();
+        $visits = PageVisit::where('page_slug', 'estudiantes')->value('visits');
 
-        return view('estudiante.index', compact('estudiantes'))
+        return view('estudiante.index', compact('estudiantes', 'visits'))
             ->with('i', (request()->input('page', 1) - 1) * $estudiantes->perPage());
     }
 
@@ -32,7 +34,9 @@ class EstudianteController extends Controller
     public function create()
     {
         $estudiante = new Estudiante();
-        return view('estudiante.create', compact('estudiante'));
+        $visits = PageVisit::where('page_slug', 'estudiantes/create')->value('visits');
+
+        return view('estudiante.create', compact('estudiante', 'visits'));
     }
 
     /**
