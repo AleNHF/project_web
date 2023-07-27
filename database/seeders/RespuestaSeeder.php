@@ -38,208 +38,499 @@ class RespuestaSeeder extends Seeder
             'esCorrecta'=>true,
             'pregunta_id'=>'1'
         ]);
+
         Respuesta::create([
-            'texto'=>'Una vocal es un sonido del lenguaje que se produce sin obstrucción significativa del flujo de aire en la boca',
-            'esCorrecta'=>1,
+            'texto'=>'pública',
+            'esCorrecta'=>false,
             'pregunta_id'=>'2'
         ]);
         Respuesta::create([
-            'texto'=>'Una oración es un conjunto de palabras que tiene sentido completo y contiene un sujeto y un verbo',
-            'esCorrecta'=>0,
+            'texto'=>'monosílaba',
+            'esCorrecta'=>false,
             'pregunta_id'=>'2'
         ]);
         Respuesta::create([
-            'texto'=>'El abecedario tiene 27 letras',
-            'esCorrecta'=>1,
+            'texto'=>'aeronáutica',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'2'
+        ]);
+        Respuesta::create([
+            'texto'=>'arraigado',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'2'
+        ]);
+        Respuesta::create([
+            'texto'=>'filosofía',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'2'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'co-he-ti-llo',
+            'esCorrecta'=>true,
             'pregunta_id'=>'3'
         ]);
         Respuesta::create([
-            'texto'=>'Un adjetivo es una palabra que describe o califica a un sustantivo',
-            'esCorrecta'=>0,
+            'texto'=>'e-u fó-rico',
+            'esCorrecta'=>false,
             'pregunta_id'=>'3'
         ]);
         Respuesta::create([
-            'texto'=>'Un sustantivo es una palabra que nombra personas, lugares, cosas o ideas',
-            'esCorrecta'=>1,
+            'texto'=>'ad-mi-si-ón',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'3'
+        ]);
+        Respuesta::create([
+            'texto'=>'len-gü-e-ta',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'3'
+        ]);
+        Respuesta::create([
+            'texto'=>'ah-u-yen-tar',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'3'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'siete',
+            'esCorrecta'=>false,
             'pregunta_id'=>'4'
         ]);
         Respuesta::create([
-            'texto'=>'Una oración es un conjunto de palabras que tiene sentido completo y contiene un sujeto y un verbo',
-            'esCorrecta'=>0,
+            'texto'=>'ocho',
+            'esCorrecta'=>false,
             'pregunta_id'=>'4'
         ]);
         Respuesta::create([
-            'texto'=>'Un verbo es una palabra que expresa una acción o un estado',
-            'esCorrecta'=>1,
+            'texto'=>'nueve',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'4'
+        ]);
+        Respuesta::create([
+            'texto'=>'diez',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'4'
+        ]);
+        Respuesta::create([
+            'texto'=>'once',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'4'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'dos',
+            'esCorrecta'=>false,
             'pregunta_id'=>'5'
         ]);
         Respuesta::create([
-            'texto'=>'Un adjetivo es una palabra que describe o califica a un sustantivo',
-            'esCorrecta'=>0,
+            'texto'=>'tres',
+            'esCorrecta'=>false,
             'pregunta_id'=>'5'
         ]);
         Respuesta::create([
-            'texto'=>'La primera letra del abecedario es "A"',
-            'esCorrecta'=>1,
+            'texto'=>'cuatro',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'5'
+        ]);
+        Respuesta::create([
+            'texto'=>'cinco',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'5'
+        ]);
+        Respuesta::create([
+            'texto'=>'seis',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'5'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'una',
+            'esCorrecta'=>false,
             'pregunta_id'=>'6'
         ]);
         Respuesta::create([
-            'texto'=>'Un antónimo es una palabra que tiene un significado opuesto a otra palabra',
-            'esCorrecta'=>0,
+            'texto'=>'dos',
+            'esCorrecta'=>false,
             'pregunta_id'=>'6'
         ]);
         Respuesta::create([
-            'texto'=>'Un sinónimo es una palabra que tiene un significado similar o idéntico a otra palabra',
-            'esCorrecta'=>1,
+            'texto'=>'tres',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'6'
+        ]);
+        Respuesta::create([
+            'texto'=>'cuatro',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'6'
+        ]);
+        Respuesta::create([
+            'texto'=>'cinco',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'6'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'capaz',
+            'esCorrecta'=>true,
             'pregunta_id'=>'7'
         ]);
         Respuesta::create([
-            'texto'=>'Un antonimo es una palabra que tiene un significado diferente o idéntico a otra palabra',
-            'esCorrecta'=>0,
+            'texto'=>'creo',
+            'esCorrecta'=>false,
             'pregunta_id'=>'7'
         ]);
         Respuesta::create([
-            'texto'=>'Un antónimo es una palabra que tiene un significado opuesto a otra palabra',
-            'esCorrecta'=>1,
+            'texto'=>'tiene',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'7'
+        ]);
+        Respuesta::create([
+            'texto'=>'día',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'7'
+        ]);
+        Respuesta::create([
+            'texto'=>'fue',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'7'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'Ajustó la cámara para capturar el paisaje.',
+            'esCorrecta'=>false,
             'pregunta_id'=>'8'
         ]);
         Respuesta::create([
-            'texto'=>'La última letra del abecedario es "Z"',
-            'esCorrecta'=>0,
+            'texto'=>'La película que vimos ayer era muy aburrida.',
+            'esCorrecta'=>false,
             'pregunta_id'=>'8'
         ]);
         Respuesta::create([
-            'texto'=>'Un adjetivo es una palabra que describe o califica a un sustantivo',
-            'esCorrecta'=>1,
+            'texto'=>'El héroe se preparó para la batalla.',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'8'
+        ]);
+        Respuesta::create([
+            'texto'=>'No se le daban muy bien los papeles de comedia',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'8'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'tres',
+            'esCorrecta'=>true,
             'pregunta_id'=>'9'
         ]);
         Respuesta::create([
-            'texto'=>'Un verbo es una palabra que expresa una acción o un estado',
-            'esCorrecta'=>0,
+            'texto'=>'cuatro',
+            'esCorrecta'=>false,
             'pregunta_id'=>'9'
         ]);
         Respuesta::create([
-            'texto'=>'Una oración es un conjunto de palabras que tiene sentido completo y contiene un sujeto y un verbo',
-            'esCorrecta'=>1,
+            'texto'=>'cinco',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'9'
+        ]);
+        Respuesta::create([
+            'texto'=>'seis',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'9'
+        ]);
+        Respuesta::create([
+            'texto'=>'siete',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'9'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'uno',
+            'esCorrecta'=>false,
             'pregunta_id'=>'10'
         ]);
         Respuesta::create([
-            'texto'=>'Un sustantivo es una palabra que nombra personas, lugares, cosas o ideas',
-            'esCorrecta'=>0,
+            'texto'=>'dos',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'10'
+        ]);
+        Respuesta::create([
+            'texto'=>'tres',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'10'
+        ]);
+        Respuesta::create([
+            'texto'=>'cuatro',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'10'
+        ]);
+        Respuesta::create([
+            'texto'=>'cinco',
+            'esCorrecta'=>false,
             'pregunta_id'=>'10'
         ]);
 
+
         //end lenguaje
+
+
 
         //begin historia
 
         Respuesta::create([
-            'texto'=>'La historia es el estudio y la narración de eventos pasados que han ocurrido en el mundo',
-            'esCorrecta'=>1,
+            'texto'=>'Guerra del chaco',
+            'esCorrecta'=>true,
             'pregunta_id'=>'11'
         ]);
         Respuesta::create([
-            'texto'=>'La civilización griega fue una antigua cultura que floreció en la región del Mediterráneo desde alrededor del siglo VIII a.C., conocida por sus avances en la filosofía, el arte, la democracia y otras áreas',
-            'esCorrecta'=>0,
+            'texto'=>'Guerra del pacifico',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'11'
+        ]);
+        Respuesta::create([
+            'texto'=>'Guerra del acre',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'11'
+        ]);
+        Respuesta::create([
+            'texto'=>'Ninguna de las anteriores',
+            'esCorrecta'=>false,
             'pregunta_id'=>'11'
         ]);
 
+
         Respuesta::create([
-            'texto'=>'Los dinosaurios fueron animales prehistóricos que vivieron hace millones de años y se extinguieron mucho tiempo antes de que apareciera el ser humano',
-            'esCorrecta'=>1,
+            'texto'=>'1904',
+            'esCorrecta'=>true,
             'pregunta_id'=>'12'
         ]);
         Respuesta::create([
-            'texto'=>'La Declaración de Independencia de Estados Unidos, firmada en 1776, proclamó la separación de las colonias americanas del dominio británico y sentó las bases para la formación del país',
-            'esCorrecta'=>0,
+            'texto'=>'1842',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'12'
+        ]);
+        Respuesta::create([
+            'texto'=>'1879',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'12'
+        ]);
+        Respuesta::create([
+            'texto'=>'1902',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'12'
+        ]);
+        Respuesta::create([
+            'texto'=>'1825',
+            'esCorrecta'=>false,
             'pregunta_id'=>'12'
         ]);
 
         Respuesta::create([
-            'texto'=>'Cristóbal Colón fue un explorador italiano que, en 1492, llegó a América creyendo que había alcanzado las Indias',
-            'esCorrecta'=>1,
+            'texto'=>'El gregoriano',
+            'esCorrecta'=>true,
             'pregunta_id'=>'13'
         ]);
         Respuesta::create([
-            'texto'=>'La Batalla de Waterloo, en 1815, fue una confrontación decisiva en la que Napoleón Bonaparte fue derrotado, poniendo fin a su gobierno y exilio final',
-            'esCorrecta'=>0,
+            'texto'=>'El chino',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'13'
+        ]);
+        Respuesta::create([
+            'texto'=>'El musulmán',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'13'
+        ]);
+        Respuesta::create([
+            'texto'=>'El hebreo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'13'
+        ]);
+        Respuesta::create([
+            'texto'=>'El Cristiano',
+            'esCorrecta'=>false,
             'pregunta_id'=>'13'
         ]);
 
         Respuesta::create([
-            'texto'=>'La Edad de Piedra fue un período de la prehistoria en el que los seres humanos usaban herramientas y armas hechas de piedra',
-            'esCorrecta'=>1,
+            'texto'=>'Geografía política, Geográfica económica, Geografía cultural',
+            'esCorrecta'=>true,
             'pregunta_id'=>'14'
         ]);
         Respuesta::create([
-            'texto'=>'Simón Bolívar fue un líder sudamericano conocido como "El Libertador", que jugó un papel importante en la independencia de varios países de América del Sur del dominio español',
-            'esCorrecta'=>0,
+            'texto'=>'Geografía social, Geográfica económica, Geografía social',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'14'
+        ]);
+        Respuesta::create([
+            'texto'=>'Geografía política, Geográfica económica, Geografía histórica',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'14'
+        ]);
+        Respuesta::create([
+            'texto'=>'Geografía política, Geográfica económica, Geografía',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'14'
+        ]);
+        Respuesta::create([
+            'texto'=>'Geografía física, Geográfica económica, Geografía social',
+            'esCorrecta'=>false,
             'pregunta_id'=>'14'
         ]);
 
         Respuesta::create([
-            'texto'=>'Los egipcios fueron una antigua civilización que vivió en el noreste de África, conocidos por construir grandes pirámides y templos.',
-            'esCorrecta'=>1,
+            'texto'=>'Francia, Inglaterra y España',
+            'esCorrecta'=>true,
             'pregunta_id'=>'15'
         ]);
         Respuesta::create([
-            'texto'=>'La Revolución Industrial fue un período de profundos cambios económicos y tecnológicos que comenzó en Inglaterra en el siglo XVIII y luego se extendió por todo el mundo',
-            'esCorrecta'=>0,
+            'texto'=>'Francia, Inglaterra y Portugal',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'15'
+        ]);
+        Respuesta::create([
+            'texto'=>'Francia, Inglaterra y Alemania',
+            'esCorrecta'=>false,
             'pregunta_id'=>'15'
         ]);
 
         Respuesta::create([
-            'texto'=>'La Revolución Industrial fue un período de profundos cambios económicos y tecnológicos que comenzó en Inglaterra en el siglo XVIII y luego se extendió por todo el mundo',
-            'esCorrecta'=>1,
+            'texto'=>'Francia, Alemania y Portugal',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'15'
+        ]);
+
+        Respuesta::create([
+            'texto'=>'España, Inglaterra y Portugal',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'15'
+        ]);
+
+
+        Respuesta::create([
+            'texto'=>'Víctor Paz Estensoro',
+            'esCorrecta'=>true,
             'pregunta_id'=>'16'
         ]);
         Respuesta::create([
-            'texto'=>'Los egipcios fueron una antigua civilización que vivió en el noreste de África, conocidos por construir grandes pirámides y templos',
-            'esCorrecta'=>0,
+            'texto'=>'Jaime Paz Zamora.',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'16'
+        ]);
+        Respuesta::create([
+            'texto'=>'Rene Barrientos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'16'
+        ]);
+        Respuesta::create([
+            'texto'=>'Lidia Gueiler',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'16'
+        ]);
+        Respuesta::create([
+            'texto'=>'Evo Morales Ayma',
+            'esCorrecta'=>false,
             'pregunta_id'=>'16'
         ]);
 
         Respuesta::create([
-            'texto'=>'Simón Bolívar fue un líder sudamericano conocido como "El Libertador", que jugó un papel importante en la independencia de varios países de América del Sur del dominio español',
-            'esCorrecta'=>1,
+            'texto'=>'Triple alianza',
+            'esCorrecta'=>true,
             'pregunta_id'=>'17'
         ]);
         Respuesta::create([
-            'texto'=>'La Edad de Piedra fue un período de la prehistoria en el que los seres humanos usaban herramientas y armas hechas de piedra',
-            'esCorrecta'=>0,
+            'texto'=>'Potencias aliadas',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'17'
+        ]);
+        Respuesta::create([
+            'texto'=>'El eje',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'17'
+        ]);
+        Respuesta::create([
+            'texto'=>'todas',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'17'
+        ]);
+        Respuesta::create([
+            'texto'=>'Ninguna de las anteriores',
+            'esCorrecta'=>false,
             'pregunta_id'=>'17'
         ]);
 
         Respuesta::create([
-            'texto'=>' La Batalla de Waterloo, en 1815, fue una confrontación decisiva en la que Napoleón Bonaparte fue derrotado, poniendo fin a su gobierno y exilio final',
-            'esCorrecta'=>1,
+            'texto'=>'Ninguna de las anteriores',
+            'esCorrecta'=>true,
             'pregunta_id'=>'18'
         ]);
         Respuesta::create([
-            'texto'=>'Cristóbal Colón fue un explorador italiano que, en 1492, llegó a América creyendo que había alcanzado las Indias',
-            'esCorrecta'=>0,
+            'texto'=>'Guatemala',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'18'
+        ]);
+        Respuesta::create([
+            'texto'=>'Honduras',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'18'
+        ]);
+        Respuesta::create([
+            'texto'=>'México',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'18'
+        ]);
+        Respuesta::create([
+            'texto'=>'Todas las anteriores',
+            'esCorrecta'=>false,
             'pregunta_id'=>'18'
         ]);
 
         Respuesta::create([
-            'texto'=>'La Declaración de Independencia de Estados Unidos, firmada en 1776, proclamó la separación de las colonias americanas del dominio británico y sentó las bases para la formación del país',
-            'esCorrecta'=>1,
+            'texto'=>'Todas las anteriores',
+            'esCorrecta'=>true,
             'pregunta_id'=>'19'
         ]);
         Respuesta::create([
-            'texto'=>'Los dinosaurios fueron animales prehistóricos que vivieron hace millones de años y se extinguieron mucho tiempo antes de que apareciera el ser humano',
-            'esCorrecta'=>0,
+            'texto'=>'Nueva España',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'19'
+        ]);
+        Respuesta::create([
+            'texto'=>'Virreinato del Perú',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'19'
+        ]);
+        Respuesta::create([
+            'texto'=>'Virreinato del Río de la Plata',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'19'
+        ]);
+        Respuesta::create([
+            'texto'=>'Virreinato de Nueva Granada',
+            'esCorrecta'=>false,
             'pregunta_id'=>'19'
         ]);
 
         Respuesta::create([
-            'texto'=>'La civilización griega fue una antigua cultura que floreció en la región del Mediterráneo desde alrededor del siglo VIII a.C., conocida por sus avances en la filosofía, el arte, la democracia y otras áreas',
-            'esCorrecta'=>1,
+            'texto'=>'Collasuyo',
+            'esCorrecta'=>true,
             'pregunta_id'=>'20'
         ]);
         Respuesta::create([
-            'texto'=>'La historia es el estudio y la narración de eventos pasados que han ocurrido en el mundo',
-            'esCorrecta'=>0,
+            'texto'=>'Chinchaysuyo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'20'
+        ]);
+        Respuesta::create([
+            'texto'=>'Antisuyo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'20'
+        ]);
+        Respuesta::create([
+            'texto'=>'Contisuyo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'20'
+        ]);
+        Respuesta::create([
+            'texto'=>'Todas las anteriores',
+            'esCorrecta'=>false,
             'pregunta_id'=>'20'
         ]);
 
@@ -248,115 +539,265 @@ class RespuestaSeeder extends Seeder
         //begin psicologia
 
         Respuesta::create([
-            'texto'=>'La psicología es el estudio de la mente y el comportamiento de las personas.',
-            'esCorrecta'=>1,
+            'texto'=>'Filósofos',
+            'esCorrecta'=>true,
             'pregunta_id'=>'21'
         ]);
         Respuesta::create([
-            'texto'=>'El respeto es la consideración y valoración positiva que tenemos hacia otras personas, sus derechos y opiniones',
-            'esCorrecta'=>0,
+            'texto'=>'Maestros',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'21'
+        ]);
+        Respuesta::create([
+            'texto'=>'Científicos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'21'
+        ]);
+        Respuesta::create([
+            'texto'=>'Astrólogos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'21'
+        ]);
+        Respuesta::create([
+            'texto'=>'Empíricos',
+            'esCorrecta'=>false,
             'pregunta_id'=>'21'
         ]);
 
         Respuesta::create([
-            'texto'=>'Las emociones son sentimientos que experimentamos, como la alegría, el miedo, la tristeza o el enojo',
-            'esCorrecta'=>1,
+            'texto'=>'Filósofos',
+            'esCorrecta'=>true,
             'pregunta_id'=>'22'
         ]);
         Respuesta::create([
-            'texto'=>'La memoria es la capacidad del cerebro para almacenar y recordar información y experiencias pasadas',
-            'esCorrecta'=>0,
+            'texto'=>'Psicólogos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'22'
+        ]);
+        Respuesta::create([
+            'texto'=>'Antropólogos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'22'
+        ]);
+        Respuesta::create([
+            'texto'=>'Curanderos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'22'
+        ]);
+        Respuesta::create([
+            'texto'=>'Astrólogos',
+            'esCorrecta'=>false,
             'pregunta_id'=>'22'
         ]);
 
         Respuesta::create([
-            'texto'=>'La empatía es la capacidad de ponerse en el lugar de otra persona y entender cómo se siente',
-            'esCorrecta'=>1,
+            'texto'=>'Estudio del alma',
+            'esCorrecta'=>true,
             'pregunta_id'=>'23'
         ]);
         Respuesta::create([
-            'texto'=>'Las habilidades sociales son las capacidades que tenemos para relacionarnos y comunicarnos de manera efectiva con otras personas',
-            'esCorrecta'=>0,
+            'texto'=>'Estudio de la cultura humana',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'23'
+        ]);
+        Respuesta::create([
+            'texto'=>'Cuerpo y alma',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'23'
+        ]);
+        Respuesta::create([
+            'texto'=>'Estudio del karma',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'23'
+        ]);
+        Respuesta::create([
+            'texto'=>'Tratado de conocimiento',
+            'esCorrecta'=>false,
             'pregunta_id'=>'23'
         ]);
 
         Respuesta::create([
-            'texto'=>'El miedo es una emoción que sentimos cuando estamos asustados o preocupados por algo',
-            'esCorrecta'=>1,
+            'texto'=>'La filosofía y la fisiología',
+            'esCorrecta'=>true,
             'pregunta_id'=>'24'
         ]);
         Respuesta::create([
-            'texto'=>'El bullying es el acoso o maltrato repetido hacia una persona por parte de otras, ya sea verbal, física o emocionalmente',
-            'esCorrecta'=>0,
+            'texto'=>'La biología y la geografía',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'24'
+        ]);
+        Respuesta::create([
+            'texto'=>'La anatomía y la historia del hombre',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'24'
+        ]);
+        Respuesta::create([
+            'texto'=>'La filosofía y la química',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'24'
+        ]);
+        Respuesta::create([
+            'texto'=>'La fisiología y la matemática',
+            'esCorrecta'=>false,
             'pregunta_id'=>'24'
         ]);
 
         Respuesta::create([
-            'texto'=>'La autoestima es la valoración y percepción que tenemos sobre nosotros mismos, es decir, cómo nos sentimos acerca de quiénes somos',
-            'esCorrecta'=>1,
+            'texto'=>'Estructuralismo',
+            'esCorrecta'=>true,
             'pregunta_id'=>'25'
         ]);
         Respuesta::create([
-            'texto'=>'El estrés es la respuesta del cuerpo a situaciones que percibimos como desafiantes o amenazantes',
-            'esCorrecta'=>0,
+            'texto'=>'La Gestalt',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'25'
+        ]);
+        Respuesta::create([
+            'texto'=>'Funcionalismo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'25'
+        ]);
+        Respuesta::create([
+            'texto'=>'Humanismo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'25'
+        ]);
+        Respuesta::create([
+            'texto'=>'Cognitivismo',
+            'esCorrecta'=>false,
             'pregunta_id'=>'25'
         ]);
 
         Respuesta::create([
-            'texto'=>'El estrés es la respuesta del cuerpo a situaciones que percibimos como desafiantes o amenazantes',
-            'esCorrecta'=>1,
+            'texto'=>'Conductismo',
+            'esCorrecta'=>true,
             'pregunta_id'=>'26'
         ]);
         Respuesta::create([
-            'texto'=>'La autoestima es la valoración y percepción que tenemos sobre nosotros mismos, es decir, cómo nos sentimos acerca de quiénes somos',
-            'esCorrecta'=>0,
+            'texto'=>'Psicoanálisis',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'26'
+        ]);
+        Respuesta::create([
+            'texto'=>'Funcionalismo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'26'
+        ]);
+        Respuesta::create([
+            'texto'=>'Cognitiva',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'26'
+        ]);
+        Respuesta::create([
+            'texto'=>'Estructuralismo',
+            'esCorrecta'=>false,
             'pregunta_id'=>'26'
         ]);
 
         Respuesta::create([
-            'texto'=>'El bullying es el acoso o maltrato repetido hacia una persona por parte de otras, ya sea verbal, física o emocionalmente',
-            'esCorrecta'=>1,
+            'texto'=>'Cognitiva',
+            'esCorrecta'=>true,
             'pregunta_id'=>'27'
         ]);
         Respuesta::create([
-            'texto'=>'El miedo es una emoción que sentimos cuando estamos asustados o preocupados por algo',
-            'esCorrecta'=>0,
+            'texto'=>'Funcionalismo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'27'
+        ]);
+        Respuesta::create([
+            'texto'=>'Estructuralismo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'27'
+        ]);
+        Respuesta::create([
+            'texto'=>'Psicoanálisis',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'27'
+        ]);
+        Respuesta::create([
+            'texto'=>'Conductismo',
+            'esCorrecta'=>false,
             'pregunta_id'=>'27'
         ]);
 
         Respuesta::create([
-            'texto'=>'Las habilidades sociales son las capacidades que tenemos para relacionarnos y comunicarnos de manera efectiva con otras personas',
-            'esCorrecta'=>1,
+            'texto'=>'Estudia todo aquello que permita mejorar la producción del
+            trabajo',
+            'esCorrecta'=>true,
             'pregunta_id'=>'28'
         ]);
         Respuesta::create([
-            'texto'=>'La empatía es la capacidad de ponerse en el lugar de otra persona y entender cómo se siente',
-            'esCorrecta'=>0,
+            'texto'=>'Estudia la conducta y los trastornos mentales',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'28'
+        ]);
+        Respuesta::create([
+            'texto'=>'Estudia los problemas de aprendizaje',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'28'
+        ]);
+        Respuesta::create([
+            'texto'=>'Estudia la personalidad',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'28'
+        ]);
+        Respuesta::create([
+            'texto'=>'Estudia las maquinas',
+            'esCorrecta'=>false,
             'pregunta_id'=>'28'
         ]);
 
         Respuesta::create([
-            'texto'=>'La memoria es la capacidad del cerebro para almacenar y recordar información y experiencias pasadas',
-            'esCorrecta'=>1,
+            'texto'=>'Clínica',
+            'esCorrecta'=>true,
             'pregunta_id'=>'29'
         ]);
         Respuesta::create([
-            'texto'=>'Las emociones son sentimientos que experimentamos, como la alegría, el miedo, la tristeza o el enojo',
-            'esCorrecta'=>0,
+            'texto'=>'Educativa',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'29'
+        ]);
+        Respuesta::create([
+            'texto'=>'Experimental',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'29'
+        ]);
+        Respuesta::create([
+            'texto'=>'Forense',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'29'
+        ]);
+        Respuesta::create([
+            'texto'=>'Educativa',
+            'esCorrecta'=>false,
             'pregunta_id'=>'29'
         ]);
 
         Respuesta::create([
-            'texto'=>'El respeto es la consideración y valoración positiva que tenemos hacia otras personas, sus derechos y opiniones',
-            'esCorrecta'=>1,
+            'texto'=>'Mantener las neuronas sujetas en lugares específicos',
+            'esCorrecta'=>true,
             'pregunta_id'=>'30'
         ]);
         Respuesta::create([
-            'texto'=>'La psicología es el estudio de la mente y el comportamiento de las personas',
-            'esCorrecta'=>0,
+            'texto'=>'Garantizar el alimento de la neurona',
+            'esCorrecta'=>false,
             'pregunta_id'=>'30'
         ]);
-
+        Respuesta::create([
+            'texto'=>'Formar el núcleo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'30'
+        ]);
+        Respuesta::create([
+            'texto'=>'Modificar el axón',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'30'
+        ]);
+        Respuesta::create([
+            'texto'=>'Ajustar los niveles de potasio',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'30'
+        ]);
         //end psicologia
     }
 }
