@@ -322,7 +322,7 @@
                     </ul>
                 </li><!-- End Preguntas Nav -->
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="{{ route('docentes.index')}}">
                         <i class="bi bi-layout-text-window-reverse"></i>
                         <span>Gestionar Docentes</span>
@@ -333,12 +333,12 @@
                     <a class="nav-link collapsed" href="#">
                         <i class="bi bi-bar-chart"></i><span>Gestionar Desafíos</span>
                     </a>
-                </li><!-- End Desafio Nav -->
+                </li><!-- End Desafio Nav --> --}}
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
                         href="#">
-                        <i class="bi bi-menu-button-wide"></i><span>Gestionar Ranking</span><i
+                        <i class="bi bi-menu-button-wide"></i><span>Ranking</span><i
                             class="bi bi-chevron-down ms-auto"></i>
                     </a>
                     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -356,7 +356,7 @@
                 </li><!-- End Ranking Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#">
+                    <a class="nav-link collapsed" href="{{ route('home') }}">
                         <i class="bi bi-bar-chart"></i><span>Reportes y Estadísticas</span>
                     </a>
                 </li><!-- End Reportes Nav -->

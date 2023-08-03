@@ -9,6 +9,7 @@ use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\AdministrativoController;
 use App\Http\Controllers\RespuestaController;
 use App\Http\Controllers\JueguitoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,16 +31,19 @@ Auth::routes();
 
 // Rutas protegidas con el middleware 'auth'
 Route::middleware(['auth', 'page.visit'])->group(function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/game', [App\Http\Controllers\HomeController::class, 'game'])->name('game');
-    Route::resource('users', UserController::class);
-    Route::resource('estudiantes', EstudianteController::class);
-    Route::resource('docentes', DocenteController::class);
-    Route::resource('administrativos', AdministrativoController::class);
-    Route::resource('preguntas', PreguntaController::class);
-    Route::resource('respuestas', RespuestaController::class);
-    Route::get('/interno', [App\Http\Controllers\JueguitoController::class,'interno'])->name('interno');
-    Route::get('/jueguito/preguntas/{salaId}/{UserId}', [App\Http\Controllers\JueguitoController::class,'sala'])->name('sala');
-    Route::post('/jueguito/result', [App\Http\Controllers\JueguitoController::class,'guardar_respuestas'])->name('guardar_respuestas');
-
+    Route::group(['middleware' => ['role:administrativo', 'role:docente']], function () {
+        Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+        Route::resource('users', UserController::class);
+        Route::resource('estudiantes', EstudianteController::class);
+        Route::resource('docentes', DocenteController::class);
+        Route::resource('administrativos', AdministrativoController::class);
+        Route::resource('preguntas', PreguntaController::class);
+        Route::resource('respuestas', RespuestaController::class);
+    });
+    Route::group(['middleware' => ['role:estudiante']], function () {
+        Route::get('/game', [App\Http\Controllers\HomeController::class, 'game'])->name('game');
+        Route::get('/interno', [App\Http\Controllers\JueguitoController::class, 'interno'])->name('interno');
+        Route::get('/jueguito/preguntas/{salaId}/{UserId}', [App\Http\Controllers\JueguitoController::class, 'sala'])->name('sala');
+        Route::post('/jueguito/result', [App\Http\Controllers\JueguitoController::class, 'guardar_respuestas'])->name('guardar_respuestas');
+    });
 });
