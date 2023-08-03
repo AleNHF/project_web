@@ -42,7 +42,7 @@ class UserSeeder extends Seeder
         ])->assignRole('estudiante');
 
         Docente::create([
-            'especialidad' => 'Literatura',
+            //'especialidad' => 'Literatura',
             'usuario_id' => 1
         ]);
 

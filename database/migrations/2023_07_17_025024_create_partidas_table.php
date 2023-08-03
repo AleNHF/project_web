@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('partidas', function (Blueprint $table) {
             $table->id();
-            $table->time('tiempo')->nullable();
             $table->string('resultado')->default(0);
-            $table->unsignedBigInteger('juego_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('sala_id');
             $table->unsignedBigInteger('pregunta_id');
             $table->timestamps();
 
-            $table->foreign('juego_id')->references('id')->on('juegos')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('sala_id')->references('id')->on('salas')->onDelete('cascade');
             $table->foreign('pregunta_id')->references('id')->on('preguntas')->onDelete('cascade');
         });
     }
