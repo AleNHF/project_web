@@ -41,14 +41,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            {{-- <div class="col-md-6">
                 <h5>Docente</h5>
                 <div class="form-group" style="margin-bottom: 10px">
                     {{ Form::label('Especialidad') }}
                     {{ Form::text('especialidad', $docente->especialidad ?? null, ['class' => 'form-control' . ($errors->has('especialidad') ? ' is-invalid' : ''), 'placeholder' => 'Especialidad']) }}
                     {!! $errors->first('especialidad', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
-            </div>
+            </div> --}}
             <div class="col-md-6">
                 <h5>Administrativo</h5>
                 <div class="form-group" style="margin-bottom: 10px">

@@ -18,19 +18,19 @@
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/quill/quill.snow.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/quill/quill.bubble.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/simple-datatables/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/quill/quill.snow.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <script src="{{ asset('assets/js/index.js')}}"></script>
+    <script src="{{ asset('assets/js/index.js') }}"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -50,7 +50,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body style="background-color: #103871;">
     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" style="display: none">
         <symbol id="circle-half" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
@@ -70,7 +70,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="{{ route('welcome')}}" class="logo d-flex align-items-center">
+            <a href="{{ route('welcome') }}" class="logo d-flex align-items-center">
                 {{-- <img src="assets/img/logo.png" alt=""> --}}
                 <span class="d-none d-lg-block">FCEE - EcoMinds</span>
             </a>
@@ -79,14 +79,6 @@
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
-
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link nav-icon search-bar-toggle " href="#">
-                        <i class="bi bi-search"></i>
-                    </a>
-                </li>
-                <!-- End Search Icon-->
-
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
@@ -99,7 +91,7 @@
                         <li class="nav-item" style="margin-right: 15px">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
                         </li>
-                    @endif
+                    @endif                   
                 @endguest
 
                 <!-- Dark/Light Mode Nav -->
@@ -110,7 +102,7 @@
                         <svg class="bi my-1 theme-icon-active" width="16" height="16" fill="currentColor">
                             <use href="#circle-half"></use>
                         </svg>
-                        <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+                        <span class="d-lg-none ms-2" id="bd-theme-text"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
                         <li>
@@ -158,111 +150,23 @@
         </nav><!-- End Icons Navigation -->
     </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero">
-        <div class="container position-relative">
-            <div class="row gy-5" data-aos="fade-in">
-                <div
-                    class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-                    <h2>Bienvenidos a <span>EcoMinds Test</span></h2>
-                    <p>¡Juega y triunfa en la FCEE!</p>
-                    <p>Aprende mientras te diviertes y prepárate para el CUP/PSA.</p>
-                    <div class="d-flex justify-content-center justify-content-lg-start">
-                        <a href="{{ route('login') }}" class="btn-get-started">Comenzar</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2">
-                    <img src="{{ asset('assets/img/welcome-img.png')}}" class="img-fluid" alt="" data-aos="zoom-out"
-                        data-aos-delay="100">
-                </div>
-            </div>
-        </div>
-
-        <div class="icon-boxes position-relative">
-            <div class="container position-relative">
-                <div class="row gy-4 mt-5 justify-content-center">
-                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon-box">
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/matematica_icon.png') }}" class="img-fluid"
-                                    alt="" style="height: 150px">
-                            </div>
-                            <h4 class="title"><a href="" class="stretched-link">Matemáticas</a></h4>
-                        </div>
-                    </div>
-                    <!--End Icon Box -->
-
-                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/psicologia_icon.png') }}" class="img-fluid"
-                                    alt="" style="height: 150px">
-                            </div>
-                            <h4 class="title"><a href="" class="stretched-link">Psicología</a></h4>
-                        </div>
-                    </div>
-                    <!--End Icon Box -->
-
-                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="icon-box">
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/historia_icon.png') }}" class="img-fluid"
-                                    alt="" style="height: 150px">
-                            </div>
-                            <h4 class="title"><a href="" class="stretched-link">Historia</a></h4>
-                        </div>
-                    </div>
-                    <!--End Icon Box -->
-                </div>
-
-                <div class="row gy-4 mt-5 justify-content-center">
-                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="icon-box">
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/lenguaje_icon.png') }}" class="img-fluid"
-                                    alt="" style="height: 150px">
-                            </div>
-                            <h4 class="title"><a href="" class="stretched-link">Lenguaje</a></h4>
-                        </div>
-                    </div>
-                    <!--End Icon Box -->
-
-                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="icon-box">
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/cultura_icon.png') }}" class="img-fluid"
-                                    alt="" style="height: 150px">
-                            </div>
-                            <h4 class="title"><a href="" class="stretched-link">Cultura General</a></h4>
-                        </div>
-                    </div>
-                    <!--End Icon Box -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Hero Section -->
-
-    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-        <button type="button" class="btn btn-danger disabled">Visitas</button>
-        <button type="button" class="btn btn-warning disabled">{{ $visits }}</button>
-    </div>
+    @yield('content')
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="./assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="./assets/vendor/echarts/echarts.min.js"></script>
-    <script src="./assets/vendor/quill/quill.min.js"></script>
-    <script src="./assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="./assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="./assets/vendor/php-email-form/validate.js"></script>
+    <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/chart.js/chart.umd.js') }}"></script>
+    <script src="{{ asset('assets/vendor/echarts/echarts.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/quill/quill.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="./assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

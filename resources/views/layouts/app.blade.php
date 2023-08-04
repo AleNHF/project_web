@@ -18,19 +18,19 @@
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/quill/quill.snow.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/quill/quill.bubble.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/simple-datatables/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/quill/quill.snow.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <script src="{{ asset('assets/js/index.js')}}"></script>
+    <script src="{{ asset('assets/js/index.js') }}"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -70,7 +70,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="#" class="logo d-flex align-items-center">
+            <a href="{{ route('welcome') }}" class="logo d-flex align-items-center">
                 {{-- <img src="assets/img/logo.png" alt=""> --}}
                 <span class="d-none d-lg-block">FCEE - EcoMinds</span>
             </a>
@@ -80,13 +80,15 @@
         </div>
         <!-- End Logo -->
 
-        <div class="search-bar" data-bs-theme="light">
-            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-            </form>
-        </div>
-        <!-- End Search Bar -->
+        @auth
+            <div class="search-bar" data-bs-theme="light">
+                <form class="search-form d-flex align-items-center" method="POST" action="#">
+                    <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                    <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+            <!-- End Search Bar -->
+        @endauth
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
@@ -102,13 +104,13 @@
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item" style="margin-right: 15px">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Inicia Sesión') }}</a>
                         </li>
                     @endif
 
                     @if (Route::has('register'))
                         <li class="nav-item" style="margin-right: 15px">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
                         </li>
                     @endif
                 @else
@@ -274,43 +276,46 @@
                     </a>
                 </li><!-- End Profile Page Nav -->
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
-                        href="#">
-                        <i class="bi bi-menu-button-wide"></i><span>Gestionar Usuarios</span><i
-                            class="bi bi-chevron-down ms-auto"></i>
-                    </a>
-                    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                        <li>
-                            <a href="{{ route('users.index') }}">
-                                <i class="bi bi-circle"></i><span>Usuarios</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('estudiantes.index') }}">
-                                <i class="bi bi-circle"></i><span>Estudiantes</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('docentes.index') }}">
-                                <i class="bi bi-circle"></i><span>Docentes</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('administrativos.index') }}">
-                                <i class="bi bi-circle"></i><span>Administrativos</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li><!-- End Usuarios Nav -->
+                @role('administrativo')
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
+                            href="#">
+                            <i class="bi bi-menu-button-wide"></i><span>Gestionar Usuarios</span><i
+                                class="bi bi-chevron-down ms-auto"></i>
+                        </a>
+                        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                            <li>
+                                <a href="{{ route('users.index') }}">
+                                    <i class="bi bi-circle"></i><span>Usuarios</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('estudiantes.index') }}">
+                                    <i class="bi bi-circle"></i><span>Estudiantes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('docentes.index') }}">
+                                    <i class="bi bi-circle"></i><span>Docentes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('administrativos.index') }}">
+                                    <i class="bi bi-circle"></i><span>Administrativos</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><!-- End Usuarios Nav -->
+                @endrole
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-journal-text"></i><span>Gestionar Preguntas</span><i class="bi bi-chevron-down ms-auto"></i>
+                        <i class="bi bi-journal-text"></i><span>Gestionar Preguntas</span><i
+                            class="bi bi-chevron-down ms-auto"></i>
                     </a>
                     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="{{ route('preguntas.index')}} ">
+                            <a href="{{ route('preguntas.index') }} ">
                                 <i class="bi bi-circle"></i><span>Preguntas</span>
                             </a>
                         </li>
@@ -321,19 +326,6 @@
                         </li>
                     </ul>
                 </li><!-- End Preguntas Nav -->
-
-                {{-- <li class="nav-item">
-                    <a class="nav-link collapsed" href="{{ route('docentes.index')}}">
-                        <i class="bi bi-layout-text-window-reverse"></i>
-                        <span>Gestionar Docentes</span>
-                    </a>
-                </li><!-- End Docentes Nav -->
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#">
-                        <i class="bi bi-bar-chart"></i><span>Gestionar Desafíos</span>
-                    </a>
-                </li><!-- End Desafio Nav --> --}}
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
@@ -381,35 +373,21 @@
         @yield('content')
     </main>
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-    </footer><!-- End Footer -->
-
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{ asset('assets/vendor/chart.js/chart.umd.js')}}"></script>
-    <script src="{{ asset('assets/vendor/echarts/echarts.min.js')}}"></script>
-    <script src="{{ asset('assets/vendor/quill/quill.min.js')}}"></script>
-    <script src="{{ asset('assets/vendor/simple-datatables/simple-datatables.js')}}"></script>
-    <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js')}}"></script>
-    <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/chart.js/chart.umd.js') }}"></script>
+    <script src="{{ asset('assets/vendor/echarts/echarts.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/quill/quill.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('assets/js/main.js')}}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>
