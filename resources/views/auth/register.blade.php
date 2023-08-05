@@ -4,7 +4,7 @@
     <div class="container position-relative" style="margin-top: 80px;">
         <div class="row gy-5" data-aos="fade-in">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/panel_login.png') }}" class="img-fluid" alt="" style="width: 100%;">
+                <img src="{{ asset('assets/img/panel_register2.png') }}" class="img-fluid" alt="" style="width: 100%;">
             </div>
             <div class="col-lg-6">
                 <h1 style="font-size: 46px; color: #FFFFFF; font-weight: bold; margin-top: 30px; margin-right: 10px;">¡Regístrate ahora y muestra al mundo de qué estás hecho!</h1>

@@ -74,18 +74,20 @@ class UserController extends Controller
         ]);
         $user->assignRole($request->input('roles'));
 
-        if ($request->input('roles') == 'docente') {
+        $role = $user->getRoleNames();
+
+        if ($role[0] == 'docente') {
             $user->tipo = 'D';
             $user->save();
 
             //Crear al docente
             Docente::create([
-                'especialidad' => $input['especialidad'],
+                //'especialidad' => $input['especialidad'],
                 'usuario_id' => $user->id
             ]);
         }
 
-        if ($request->input('roles') == 'administrativo') {
+        if ($role[0] == 'administrativo') {
             $user->tipo = 'A';
             $user->save();
 

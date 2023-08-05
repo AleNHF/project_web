@@ -46,6 +46,7 @@
                                     <tr>
                                         <th>No</th>
 
+                                        <th>CI</th>
                                         <th>Cargo</th>
                                         <th>Usuario</th>
 
@@ -57,6 +58,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
+                                            <td>{{ $administrativo->user->ci }}</td>
                                             <td>{{ $administrativo->cargo }}</td>
                                             <td>{{ $administrativo->user->name }}</td>
 

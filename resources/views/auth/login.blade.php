@@ -4,7 +4,7 @@
     <div class="container position-relative" style="margin-top: 80px;">
         <div class="row gy-5" data-aos="fade-in">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/panel_login.png') }}" class="img-fluid" alt="" style="width: 95%;">
+                <img src="{{ asset('assets/img/welcome-img.png') }}" class="img-fluid" alt="" style="width: 100%;">
             </div>
             <div class="col-lg-6">
                 <h1 style="font-size: 56px; color: #FFFFFF; font-weight: bold; margin-top: 40px; margin-right: 10px;">¡Bienvenido de vuelta!</h1>

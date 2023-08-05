@@ -46,9 +46,9 @@
                                     <tr>
                                         <th>No</th>
 
-                                        <th>Name</th>
+                                        <th>Nombre</th>
                                         <th>Email</th>
-                                        <th>Telefono</th>
+                                        <th>Celular</th>
                                         <th>Rol</th>
 
                                         <th></th>

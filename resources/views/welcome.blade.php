@@ -188,6 +188,7 @@
                                     alt="" style="height: 150px">
                             </div>
                             <h4 class="title"><a href="" class="stretched-link">Matemáticas</a></h4>
+                            <p>Sumérgete en un mundo numérico lleno de diversión.</p>
                         </div>
                     </div>
                     <!--End Icon Box -->
@@ -199,6 +200,7 @@
                                     alt="" style="height: 150px">
                             </div>
                             <h4 class="title"><a href="" class="stretched-link">Psicología</a></h4>
+                            <p>Enfrenta los desafíos mentales más intrigantes.</p>
                         </div>
                     </div>
                     <!--End Icon Box -->
@@ -210,6 +212,7 @@
                                     alt="" style="height: 150px">
                             </div>
                             <h4 class="title"><a href="" class="stretched-link">Historia</a></h4>
+                            <p>Viaja en el tiempo y conquista la hisotria.</p>
                         </div>
                     </div>
                     <!--End Icon Box -->
@@ -223,6 +226,7 @@
                                     alt="" style="height: 150px">
                             </div>
                             <h4 class="title"><a href="" class="stretched-link">Lenguaje</a></h4>
+                            <p>Desafía tu mente con estas preguntas lingüísticas.</p>
                         </div>
                     </div>
                     <!--End Icon Box -->
@@ -234,6 +238,7 @@
                                     alt="" style="height: 150px">
                             </div>
                             <h4 class="title"><a href="" class="stretched-link">Cultura General</a></h4>
+                            <p>Enfrenta estas pregunta con confianza y sabiduría.</p>
                         </div>
                     </div>
                     <!--End Icon Box -->

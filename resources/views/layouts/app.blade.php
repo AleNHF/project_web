@@ -294,11 +294,11 @@
                                     <i class="bi bi-circle"></i><span>Estudiantes</span>
                                 </a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="{{ route('docentes.index') }}">
                                     <i class="bi bi-circle"></i><span>Docentes</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a href="{{ route('administrativos.index') }}">
                                     <i class="bi bi-circle"></i><span>Administrativos</span>

@@ -46,6 +46,7 @@
                                     <tr>
                                         <th>No</th>
 
+                                        <th>CI</th>
                                         <th>Estudiante</th>
                                         <th>Carrera de Interés</th>
                                         <th>Colegio</th>
@@ -59,6 +60,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
+                                            <td>{{ $estudiante->user->ci }}</td>
                                             <td>{{ $estudiante->user->name }}</td>
                                             <td>{{ $estudiante->carreraInteres }}</td>
                                             <td>{{ $estudiante->colegio }}</td>
