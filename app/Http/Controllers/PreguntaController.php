@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Area;
 use App\Models\Pregunta;
 use App\Models\PageVisit;
+use App\Models\Respuesta;
 use Illuminate\Http\Request;
 
 /**
@@ -35,8 +37,10 @@ class PreguntaController extends Controller
     {
         $pregunta = new Pregunta();
         $visits = PageVisit::where('page_slug', 'preguntas/create')->value('visits');
+        $areas = Area::all();
+        $respuesta = new Respuesta();
 
-        return view('pregunta.create', compact('pregunta', 'visits'));
+        return view('pregunta.create', compact('pregunta', 'visits', 'areas', 'respuesta'));
     }
 
     /**
@@ -49,7 +53,18 @@ class PreguntaController extends Controller
     {
         request()->validate(Pregunta::$rules);
 
-        $pregunta = Pregunta::create($request->all());
+        $pregunta = Pregunta::create($request->all());  
+        
+        $pregunta->docente_id = auth()->user()->id;
+        $pregunta->save();
+
+        foreach ($request->input('respuestas') as $respuestaData) {
+            Respuesta::create([
+                'texto' => $respuestaData['texto'],
+                'esCorrecta' => $respuestaData['esCorrecta'],
+                'pregunta_id' => $pregunta->id
+            ]);
+        }
 
         return redirect()->route('preguntas.index')
             ->with('success', 'Pregunta created successfully.');

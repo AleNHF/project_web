@@ -1,10 +1,20 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ __('Create') }} Pregunta
+    {{ __('Crear') }} Pregunta
 @endsection
 
 @section('content')
+    <div class="pagetitle">
+        <h1>Gestionar Preguntas</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('preguntas.index') }}">Preguntas</a></li>
+                <li class="breadcrumb-item active">Crear</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -13,10 +23,11 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Pregunta</span>
+                        <span class="card-title">{{ __('Crear') }} Pregunta</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('preguntas.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('preguntas.store') }}" role="form"
+                            enctype="multipart/form-data">
                             @csrf
 
                             @include('pregunta.form')

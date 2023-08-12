@@ -41,6 +41,12 @@ Route::middleware(['auth', 'page.visit'])->group(function () {
         Route::resource('respuestas', RespuestaController::class);
     });
 
+    Route::group(['middleware' => ['role:docente']], function () {
+        Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+        Route::resource('preguntas', PreguntaController::class);
+        Route::resource('respuestas', RespuestaController::class);
+    });
+
     Route::group(['middleware' => ['role:estudiante']], function () {
         Route::get('/game', [App\Http\Controllers\HomeController::class, 'game'])->name('game');
         Route::get('/interno', [App\Http\Controllers\JueguitoController::class, 'interno'])->name('interno');
