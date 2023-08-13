@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('salas', function (Blueprint $table) {
             $table->id(); 
-            $table->string('code');
+            $table->string('code')->nullable();
             $table->time('duracion')->default('24:00:00');
             $table->string('estado')->default('off');
             $table->unsignedBigInteger('user_retador')->nullable();;

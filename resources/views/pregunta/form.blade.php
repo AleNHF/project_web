@@ -24,7 +24,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         {{ Form::label('Respuesta', 'Seleccione una opción') }}
-                        {{ Form::select('respuestas[' . ($i - 1) . '][esCorrecta]', ['true' => 'Correcta', 'false' => 'Incorrecta'], null, ['class' => 'form-control' . ($errors->has('esCorrecta') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione una opción']) }}
+                        {{ Form::select('respuestas[' . ($i - 1) . '][esCorrecta]', [true => 'Correcta', false => 'Incorrecta'], null, ['class' => 'form-control' . ($errors->has('esCorrecta') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione una opción']) }}
                         {!! $errors->first('esCorrecta', '<div class="invalid-feedback">:message</div>') !!}
                     </div>
                 </div>
