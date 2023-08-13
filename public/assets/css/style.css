@@ -1385,3 +1385,48 @@ h6 {
     font-weight: bold;
     /* Peso de fuente */
 }
+
+/* Game boxes */
+.hero .game-box {
+    padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 2px 2px 29px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.hero .game-box .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.hero .game-box .title a {
+    color: #103871;
+    transition: 0.3s;
+}
+
+.hero .game-box .game {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    font-size: 48px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero .game-box:hover {
+    background: #51678f;
+}
+
+.hero .game-box:hover .title a,
+.hero .game-box:hover .game {
+    color: #FFFFFF;
+}
