@@ -19,11 +19,11 @@ class EstudianteController extends Controller
      */
     public function index()
     {
-        $estudiantes = Estudiante::paginate();
+        $estudiantes = Estudiante::all();
         $visits = PageVisit::where('page_slug', 'estudiantes')->value('visits');
 
-        return view('estudiante.index', compact('estudiantes', 'visits'))
-            ->with('i', (request()->input('page', 1) - 1) * $estudiantes->perPage());
+        return view('estudiante.index', compact('estudiantes', 'visits'));
+            //->with('i', (request()->input('page', 1) - 1) * $estudiantes->perPage());
     }
 
     /**

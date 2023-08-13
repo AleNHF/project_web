@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('template_title')
-    {{ $pregunta->area->nombre ?? "{{ __('Ver') Pregunta" }}
-@endsection
-
 @section('content')
     <div class="pagetitle">
         <h1>Gestionar Preguntas</h1>
@@ -20,25 +16,43 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="float-left">
-                            <span class="card-title">{{ __('Ver') }} Pregunta</span>
-                        </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('preguntas.index') }}"> {{ __('Volver') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-
                         <div class="form-group">
-                            <strong>Texto:</strong>
-                            {{ $pregunta->texto }}
+                            @if($pregunta->area->nombre == 'Lenguaje')
+                                <h4><span class="badge badge-danger">{{ $pregunta->area->nombre }}</span></h4>
+                            @elseif ($pregunta->area->nombre == 'Historia')
+                                <h4><span class="badge badge-success">{{ $pregunta->area->nombre }}</span></h4>
+                            @elseif ($pregunta->area->nombre == 'Psicologia')
+                                <h4><span class="badge badge-warning">{{ $pregunta->area->nombre }}</span></h4>
+                            @elseif ($pregunta->area->nombre == 'Matemáticas')
+                                <h4><span class="badge badge-primary">{{ $pregunta->area->nombre }}</span></h4>
+                            @endif                          
                         </div>
                         <div class="form-group">
-                            <strong>Área:</strong>
-                            {{ $pregunta->area->nombre }}
+                            <strong>Pregunta:</strong>
+                            <h5>{{ $pregunta->texto }}</h5>
                         </div>
-
+                        <strong>Respuestas</strong>
+                        <div class="form-group">
+                            <ul class="list-group">
+                                @foreach ($respuestas as $respuesta)
+                                    <li class="list-group-item">
+                                        @if ($respuesta->esCorrecta)
+                                            <i class="bi bi-check-circle text-success"></i>
+                                            {{ $respuesta->texto }}
+                                        @else
+                                            <i class="bi bi-x-circle text-danger"></i>
+                                            {{ $respuesta->texto }}
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -17,14 +17,14 @@
                 <div class="col-md-8">
                     <div class="form-group" style="margin-bottom: 10px">
                         {{ Form::label('Respuesta ' . $i) }}
-                        {{ Form::text('respuestas[' . ($i - 1) . '][texto]', null, ['class' => 'form-control' . ($errors->has('texto') ? ' is-invalid' : ''), 'placeholder' => 'Respuesta ' . $i]) }}
+                        {{ Form::text('respuestas[' . ($i - 1) . '][texto]', isset($pregunta) ? $pregunta->respuestas[$i - 1]['texto'] : null, ['class' => 'form-control' . ($errors->has('texto') ? ' is-invalid' : ''), 'placeholder' => 'Respuesta ' . $i]) }}
                         {!! $errors->first('texto', '<div class="invalid-feedback">:message</div>') !!}
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         {{ Form::label('Respuesta', 'Seleccione una opción') }}
-                        {{ Form::select('respuestas[' . ($i - 1) . '][esCorrecta]', [true => 'Correcta', false => 'Incorrecta'], null, ['class' => 'form-control' . ($errors->has('esCorrecta') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione una opción']) }}
+                        {{ Form::select('respuestas[' . ($i - 1) . '][esCorrecta]', [true => 'Correcta', false => 'Incorrecta'], isset($pregunta) ? $pregunta->respuestas[$i - 1]['esCorrecta'] : null, ['class' => 'form-control' . ($errors->has('esCorrecta') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione una opción']) }}
                         {!! $errors->first('esCorrecta', '<div class="invalid-feedback">:message</div>') !!}
                     </div>
                 </div>

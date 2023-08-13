@@ -48,13 +48,14 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table class="table datatable">
+                            {{-- <table class="table table-striped table-hover">  --}}
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
 
-                                        <th>Pregunta</th>
-                                        <th>Área</th>
+                                        <th style="width: 30%;">Pregunta</th>
+                                        <th style="width: 20%;">Área</th>
 
                                         <th></th>
                                     </tr>
@@ -62,9 +63,10 @@
                                 <tbody>
                                     @foreach ($preguntas as $pregunta)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            {{-- <td>{{ ++$i }}</td> --}}
+                                            <td>{{ $pregunta->id }}</td>
 
-                                            <td>{{ $pregunta->texto }}</td>
+                                            <td>{{ Str::words($pregunta->texto, 10) }}</td>
                                             <td>{{ $pregunta->area->nombre }}</td>
 
                                             <td>
@@ -91,8 +93,8 @@
                             </table>
                         </div>
                     </div>
-                </div>
-                {!! $preguntas->links() !!}
+                </div>             
+                    {{-- {!! $preguntas->links() !!}         --}}
             </div>
         </div>
     </div>

@@ -21,11 +21,12 @@ class PreguntaController extends Controller
      */
     public function index()
     {
-        $preguntas = Pregunta::paginate();
+        // $preguntas = Pregunta::paginate();
+        $preguntas = Pregunta::all();
         $visits = PageVisit::where('page_slug', 'preguntas')->value('visits');
 
-        return view('pregunta.index', compact('preguntas', 'visits'))
-            ->with('i', (request()->input('page', 1) - 1) * $preguntas->perPage());
+        return view('pregunta.index', compact('preguntas', 'visits'));
+            //->with('i', (request()->input('page', 1) - 1) * $preguntas->perPage());
     }
 
     /**
@@ -79,8 +80,9 @@ class PreguntaController extends Controller
     public function show($id)
     {
         $pregunta = Pregunta::find($id);
+        $respuestas = Respuesta::where('pregunta_id', $pregunta->id)->get();
 
-        return view('pregunta.show', compact('pregunta'));
+        return view('pregunta.show', compact('pregunta', 'respuestas'));
     }
 
     /**
@@ -92,8 +94,10 @@ class PreguntaController extends Controller
     public function edit($id)
     {
         $pregunta = Pregunta::find($id);
+        $areas = Area::all();
+        $respuesta = Respuesta::where('pregunta_id', $pregunta->id)->get();
 
-        return view('pregunta.edit', compact('pregunta'));
+        return view('pregunta.edit', compact('pregunta', 'areas', 'respuesta'));
     }
 
     /**
@@ -109,8 +113,21 @@ class PreguntaController extends Controller
 
         $pregunta->update($request->all());
 
+        $respuestas = Respuesta::where('pregunta_id', $pregunta->id)->get();
+
+        foreach ($respuestas as $index => $item) {
+            $respuestaData = $request->input('respuestas.' . $index);
+        
+            if ($respuestaData) {
+                $item->update([
+                    'texto' => $respuestaData['texto'],
+                    'esCorrecta' => $respuestaData['esCorrecta'],
+                ]);
+            }
+        }
+      
         return redirect()->route('preguntas.index')
-            ->with('success', 'Pregunta updated successfully');
+            ->with('success', 'La pregunta se actualizó con éxito.');
     }
 
     /**
@@ -121,6 +138,8 @@ class PreguntaController extends Controller
     public function destroy($id)
     {
         $pregunta = Pregunta::find($id)->delete();
+
+        Respuesta::where('pregunta_id', $pregunta->id)->delete();
 
         return redirect()->route('preguntas.index')
                 ->with('success', 'Pregunta deleted successfully');

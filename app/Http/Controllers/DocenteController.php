@@ -19,11 +19,11 @@ class DocenteController extends Controller
      */
     public function index()
     {
-        $docentes = Docente::paginate();
+        $docentes = Docente::all();
         $visits = PageVisit::where('page_slug', 'docentes')->value('visits');
 
-        return view('docente.index', compact('docentes', 'visits'))
-            ->with('i', (request()->input('page', 1) - 1) * $docentes->perPage());
+        return view('docente.index', compact('docentes', 'visits'));
+            //->with('i', (request()->input('page', 1) - 1) * $docentes->perPage());
     }
 
     /**

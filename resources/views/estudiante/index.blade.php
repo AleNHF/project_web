@@ -41,7 +41,7 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table class="table datatable">
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
@@ -58,7 +58,7 @@
                                 <tbody>
                                     @foreach ($estudiantes as $estudiante)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td>{{ $estudiante->id }}</td>
 
                                             <td>{{ $estudiante->user->ci }}</td>
                                             <td>{{ $estudiante->user->name }}</td>
@@ -86,7 +86,6 @@
                         </div>
                     </div>
                 </div>
-                {!! $estudiantes->links() !!}
             </div>
         </div>
     </div>

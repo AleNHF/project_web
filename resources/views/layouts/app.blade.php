@@ -4,10 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'FCEE - EcoMinds') }}</title>
 
     <!-- Google Fonts -->
@@ -28,27 +25,22 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
+    <!-- Bootstrap JS (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <script src="{{ asset('assets/js/index.js') }}"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: May 30 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    * Template Name: NiceAdmin
+    * Updated: May 30 2023 with Bootstrap v5.3.0
+    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
+
 
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" style="display: none">
@@ -280,7 +272,7 @@
                     <li class="nav-item">
                         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
                             href="#">
-                            <i class="bi bi-menu-button-wide"></i><span>Gestionar Usuarios</span><i
+                            <i class="bi bi-people"></i><span>Gestionar Usuarios</span><i
                                 class="bi bi-chevron-down ms-auto"></i>
                         </a>
                         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -294,11 +286,6 @@
                                     <i class="bi bi-circle"></i><span>Estudiantes</span>
                                 </a>
                             </li>
-                            {{-- <li>
-                                <a href="{{ route('docentes.index') }}">
-                                    <i class="bi bi-circle"></i><span>Docentes</span>
-                                </a>
-                            </li> --}}
                             <li>
                                 <a href="{{ route('administrativos.index') }}">
                                     <i class="bi bi-circle"></i><span>Administrativos</span>
@@ -309,23 +296,10 @@
                 @endrole
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                        <i class="bi bi-journal-text"></i><span>Gestionar Preguntas</span><i
-                            class="bi bi-chevron-down ms-auto"></i>
+                    <a class="nav-link collapsed" href="{{ route('preguntas.index') }}">
+                        <i class="bi bi-journal-text"></i><span>Gestionar Preguntas</span>
                     </a>
-                    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                        <li>
-                            <a href="{{ route('preguntas.index') }} ">
-                                <i class="bi bi-circle"></i><span>Preguntas</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('respuestas.index') }}">
-                                <i class="bi bi-circle"></i><span>Respuestas</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li><!-- End Preguntas Nav -->
+                </li><!-- End Preguntas Page Nav -->
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"

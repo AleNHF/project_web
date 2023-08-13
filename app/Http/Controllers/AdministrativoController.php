@@ -19,11 +19,11 @@ class AdministrativoController extends Controller
      */
     public function index()
     {
-        $administrativos = Administrativo::paginate();
+        $administrativos = Administrativo::all();
         $visits = PageVisit::where('page_slug', 'administrativos')->value('visits');
 
-        return view('administrativo.index', compact('administrativos', 'visits'))
-            ->with('i', (request()->input('page', 1) - 1) * $administrativos->perPage());
+        return view('administrativo.index', compact('administrativos', 'visits'));
+            //->with('i', (request()->input('page', 1) - 1) * $administrativos->perPage());
     }
 
     /**
