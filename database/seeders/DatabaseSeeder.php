@@ -16,10 +16,11 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UserSeeder::class,
             AreaSeeder::class,
-            PreguntaSeeder::class,
             ModoSeeder::class,
-            RespuestaSeeder::class,
-            PaginasSeeder::class
+            //RespuestaSeeder::class,
+            PaginasSeeder::class,
+            LenguajeSeeder::class,
+            MatematicaSeeder::class
         ]);
     }
 }
