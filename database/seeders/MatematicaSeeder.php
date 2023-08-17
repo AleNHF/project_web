@@ -876,7 +876,7 @@ class MatematicaSeeder extends Seeder
         ]);
 
         Pregunta::create([
-            'texto' => 'Reducir la siguiente expresión: (16/3) - (1/(4-(1/(3-(1/(2-(3/2))))))) 16\u00F73 - 1\u00F74 - 1\u00F73 - 1\u00F72 - 3\u00F72',
+            'texto' => 'Reducir la siguiente expresión: (16/3) - (1/(4-(1/(3-(1/(2-(3/2)))))))',
             'area_id' => '4'
         ]);
         Respuesta::create([
@@ -963,6 +963,546 @@ class MatematicaSeeder extends Seeder
             'texto'=>'NA',
             'esCorrecta'=>false,
             'pregunta_id'=>'132'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Si se vende 3/4 de una pieza de tela quedan 27 metros. El número de metros que tenía la pieza es:',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'70',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'133'
+        ]);
+        Respuesta::create([
+            'texto'=>'45',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'133'
+        ]);
+        Respuesta::create([
+            'texto'=>'85',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'133'
+        ]);
+        Respuesta::create([
+            'texto'=>'108',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'133'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'133'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Realizando operaciones de C = (4^(5/6) . 4^(3/4) . 4^(-4/9) . 4^2)/(4^(-3/4) . 4^(17/9) . 4^1), obtenemos como resultado:',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'64',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'134'
+        ]);
+        Respuesta::create([
+            'texto'=>'-64',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'134'
+        ]);
+        Respuesta::create([
+            'texto'=>'4',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'134'
+        ]);
+        Respuesta::create([
+            'texto'=>'16',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'134'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'134'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Siendo A = {a,b,c,d}, B = {b,d,e,f}, C = {c,d,e,g}. Hallar: (A ∩ B) ∪ (A - C)',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'{a}',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'135'
+        ]);
+        Respuesta::create([
+            'texto'=>'{a,d}',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'135'
+        ]);
+        Respuesta::create([
+            'texto'=>'{a,b,d}',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'135'
+        ]);
+        Respuesta::create([
+            'texto'=>'ϕ',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'135'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'135'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Si se simplifica la expresión ((√48 - √147 + √27)/√3))^2^(-0), tenemos como resultado',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'1',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'136'
+        ]);
+        Respuesta::create([
+            'texto'=>'√2',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'136'
+        ]);
+        Respuesta::create([
+            'texto'=>'√3',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'136'
+        ]);
+        Respuesta::create([
+            'texto'=>'0',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'136'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'136'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Calcular G = √[n]((250^n + 25^n) / (50^n + 5^n))',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'-1',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'137'
+        ]);
+        Respuesta::create([
+            'texto'=>'1',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'137'
+        ]);
+        Respuesta::create([
+            'texto'=>'2',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'137'
+        ]);
+        Respuesta::create([
+            'texto'=>'5',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'137'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'137'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'El precio de un vestido en el “Ventura Mall” es de 160 Bs. Si se hace un primer descuento del 10% y después del 50% sobre el primer descuento, entonces se pagó por el vestido en bolivianos:',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'115 Bs',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'138'
+        ]);
+        Respuesta::create([
+            'texto'=>'100 Bs',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'138'
+        ]);
+        Respuesta::create([
+            'texto'=>'120 Bs',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'138'
+        ]);
+        Respuesta::create([
+            'texto'=>'136 Bs',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'138'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'138'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Reduciendo la expresión C = 1 - 1 / (1 - (1 / (1 - 1/2)))',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'2',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'139'
+        ]);
+        Respuesta::create([
+            'texto'=>'1',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'139'
+        ]);
+        Respuesta::create([
+            'texto'=>'0',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'139'
+        ]);
+        Respuesta::create([
+            'texto'=>'-1',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'139'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'139'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Después de simplificar -3 . √(1/3) - √27 + √48 se tiene como resultado:',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'1',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'140'
+        ]);
+        Respuesta::create([
+            'texto'=>'-1',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'140'
+        ]);
+        Respuesta::create([
+            'texto'=>'2',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'140'
+        ]);
+        Respuesta::create([
+            'texto'=>'0',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'140'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'140'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Dado los conjuntos A = {0,1,2,3,4,5}, B = {1,3,5}, C = {1,5}, determinar la siguiente operación: (A ∩ B) - (A - C)',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'{1,5}',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'141'
+        ]);
+        Respuesta::create([
+            'texto'=>'{0,2,4}',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'141'
+        ]);
+        Respuesta::create([
+            'texto'=>'{1,2,4}',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'141'
+        ]);
+        Respuesta::create([
+            'texto'=>'ϕ',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'141'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'141'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Si 6 carpinteros hacen un juego de muebles en 20 días. Si se retiran 2 carpinteros ¿En cuántos días acabaran en hacer el mismo juego de muebles?',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'35 días',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'142'
+        ]);
+        Respuesta::create([
+            'texto'=>'60 días',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'142'
+        ]);
+        Respuesta::create([
+            'texto'=>'25 días',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'142'
+        ]);
+        Respuesta::create([
+            'texto'=>'20 días',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'142'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'142'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'El conjunto A = {2; 0.5; -5} pertenece a los siguientes conjunto de números',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'N;Q;R;C',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'143'
+        ]);
+        Respuesta::create([
+            'texto'=>'Q;R;C',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'143'
+        ]);
+        Respuesta::create([
+            'texto'=>'R;C',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'143'
+        ]);
+        Respuesta::create([
+            'texto'=>'R',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'143'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'143'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Teniendo; A = {1,2,3,5,7}; B = {2,4,6,8,9}; C = {0,1,3,6,9}. Calcular: (A^C - C^C) ∩ (B^C ∩ A^C). Considerar: U = A ∪ B ∪ C',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'{3,9}',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'144'
+        ]);
+        Respuesta::create([
+            'texto'=>'{2,5}',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'144'
+        ]);
+        Respuesta::create([
+            'texto'=>'ϕ',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'144'
+        ]);
+        Respuesta::create([
+            'texto'=>'{0}',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'144'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'144'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Simplificar C = ((1/3)+((1/3)/(5/6))+((1/35)/(6/7)))/(23/30)',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'30',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'145'
+        ]);
+        Respuesta::create([
+            'texto'=>'6',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'145'
+        ]);
+        Respuesta::create([
+            'texto'=>'5',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'145'
+        ]);
+        Respuesta::create([
+            'texto'=>'1',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'145'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'145'
+        ]);
+
+        Pregunta::create([
+            'texto' => '- Un total de 35 sastres fueron entrevistados para un trabajo; 25 sabían hacer trajes, 28 sabían hacer camisas y dos no sabían hacer ninguna de las dos cosas. ¿Cuántos sabían hacer trajes y camisas?',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'10',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'146'
+        ]);
+        Respuesta::create([
+            'texto'=>'20',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'146'
+        ]);
+        Respuesta::create([
+            'texto'=>'30',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'146'
+        ]);
+        Respuesta::create([
+            'texto'=>'25',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'146'
+        ]);
+        Respuesta::create([
+            'texto'=>'Ninguna',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'146'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Una cuadrilla de 12 obreros pueden hacer una obra en 10 días. ¿Qué tiempo tardaran 15 obreros en realizar la misma obra?',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'8',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'147'
+        ]);
+        Respuesta::create([
+            'texto'=>'4',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'147'
+        ]);
+        Respuesta::create([
+            'texto'=>'6',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'147'
+        ]);
+        Respuesta::create([
+            'texto'=>'7',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'147'
+        ]);
+        Respuesta::create([
+            'texto'=>'Ninguna',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'147'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Al efectuar las operaciones indicadas en la expresión aritmética E = (3/2)√48 - (2/3)√27 + (4/5)√75 - 3√(3^-1), queda:',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'-√3',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'148'
+        ]);
+        Respuesta::create([
+            'texto'=>'√3',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'148'
+        ]);
+        Respuesta::create([
+            'texto'=>'5√3',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'148'
+        ]);
+        Respuesta::create([
+            'texto'=>'7√3',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'148'
+        ]);
+        Respuesta::create([
+            'texto'=>'9√3',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'148'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Al simplificar: E = ((2^(3x+1))+(8^(x+2)))/(2^(3x+1))',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'2',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'149'
+        ]);
+        Respuesta::create([
+            'texto'=>'16',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'149'
+        ]);
+        Respuesta::create([
+            'texto'=>'23',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'149'
+        ]);
+        Respuesta::create([
+            'texto'=>'32',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'149'
+        ]);
+        Respuesta::create([
+            'texto'=>'33',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'149'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Simplificar la expresión: E = √√[3]((64x^6 y^12) / (z^18))',
+            'area_id' => '4'
+        ]);
+        Respuesta::create([
+            'texto'=>'xy^2',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'150'
+        ]);
+        Respuesta::create([
+            'texto'=>'(2xy^2)/z^3',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'150'
+        ]);
+        Respuesta::create([
+            'texto'=>'2xz^3',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'150'
+        ]);
+        Respuesta::create([
+            'texto'=>'2xy/z^2',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'150'
+        ]);
+        Respuesta::create([
+            'texto'=>'NA',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'150'
         ]);
     }
 }
