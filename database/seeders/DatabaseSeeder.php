@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             AreaSeeder::class,
             ModoSeeder::class,
-            //RespuestaSeeder::class,
             PaginasSeeder::class,
             LenguajeSeeder::class,
-            MatematicaSeeder::class
+            MatematicaSeeder::class,
+            HistoriaSeeder::class
         ]);
     }
 }
