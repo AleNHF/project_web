@@ -27,6 +27,10 @@ Route::get('/', function () {
     return view('welcome', compact('visits'));
 })->name('welcome');
 
+Route::get('/general', function() {
+    return view('jueguito.general');
+})->name('jueguito.general');
+
 Auth::routes();
 
 // Rutas protegidas con el middleware 'auth'

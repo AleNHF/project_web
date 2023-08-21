@@ -22,7 +22,7 @@ class AreaSeeder extends Seeder
             'puntaje'=> 20
         ]);
         Area::create([
-            'nombre'=> 'Psicologia',
+            'nombre'=> 'Psicología',
             'puntaje'=> 20
         ]);
         Area::create([

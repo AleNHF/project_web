@@ -1469,3 +1469,18 @@ h6 {
     border-color: #007bff;
     color: #fff;
 }
+
+/*--------------------------------------------------------------
+# Main Game
+--------------------------------------------------------------*/
+#maingame {
+    margin-top: 60px;
+    /* padding: 20px 30px; */
+    transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+    #maingame {
+        padding: 20px;
+    }
+}

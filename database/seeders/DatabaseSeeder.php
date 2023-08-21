@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             PaginasSeeder::class,
             LenguajeSeeder::class,
             MatematicaSeeder::class,
-            HistoriaSeeder::class
+            HistoriaSeeder::class,
+            PsicologiaSeeder::class
         ]);
     }
 }

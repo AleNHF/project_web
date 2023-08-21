@@ -164,81 +164,9 @@
         </nav><!-- End Icons Navigation -->
     </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero">
-        <div class="container position-relative">
-            <div class="row gy-5" data-aos="fade-in">
-                {{-- <div class="col-lg-12">
-                    <img src="{{ asset('assets/img/panel_juego.png') }}" alt="" data-aos="zoom-out"
-                        data-aos-delay="100" style="width: 90%; height: 90%;">
-                </div> --}}
-            </div>
-        </div>
-        <div class="icon-boxes position-relative">
-            <div class="container position-relative">
-                <div class="row gy-4 mt-5 justify-content-center">
-                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="game-box">
-                            <h4 class="title"
-                                style="font-size: 36px; color: black; font-weight: bold; margin-bottom: 40px;">
-                                <a href="{{ route('interno') }}" class="stretched-link">INTERNO</a>
-                            </h4>
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/interno_logo.png') }}" class="img-fluid"
-                                    alt="" style="height: 150px">
-                            </div>
-                            <div class="game" color: white; display: flex; justify-content: center; align-items:
-                                center; height: 20px;">
-                                <p
-                                    style="font-size: 20px; text-align: center; background-color: orange; color: white; padding: 10px; border-radius: 15px; box-shadow: 0px 0px 10px black;">
-                                    Desafía a tus compañeros de colegio</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End game Box -->
-                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="game-box">
-                            <h4 class="title"
-                                style="font-size: 36px; color: black; font-weight: bold; margin-bottom: 40px;">
-                                <a href="{{ route('interno') }}" class="stretched-link">DUELO</a>
-                            </h4>
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/duelo_logo.png') }}" class="img-fluid"
-                                    alt="" style="height: 150px">
-                            </div>
-                            <div class="game" color: white; display: flex; justify-content: center; align-items:
-                                center; height: 20px;">
-                                <p
-                                    style="font-size: 20px; text-align: center; background-color: orange; color: white; padding: 10px; border-radius: 15px; box-shadow: 0px 0px 10px black;">
-                                    Reta a un duelo en una de las materias a un amigo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End game Box -->
-                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="game-box">
-                            <h4 class="title"
-                                style="font-size: 36px; color: black; font-weight: bold; margin-bottom: 40px;">
-                                <a href="{{ route('interno') }}" class="stretched-link">GENERAL</a>
-                            </h4>
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/general_logo.png') }}" class="img-fluid"
-                                    alt="" style="height: 150px">
-                            </div>
-                            <div class="game" color: white; display: flex; justify-content: center; align-items:
-                                center; height: 20px;">
-                                <p
-                                    style="font-size: 20px; text-align: center; background-color: orange; color: white; padding: 10px; border-radius: 15px; box-shadow: 0px 0px 10px black;">
-                                    Desafía aleatoriamente a cualquier usuario</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End game Box -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Hero Section -->
+    <main id="maingame" class="maingame">
+        @yield('content')
+    </main>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>

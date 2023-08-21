@@ -1136,412 +1136,712 @@ class PsicologiaSeeder extends Seeder
         ]);
         Respuesta::create([
             'texto'=>'Al valor que le damos a los cambios fisiológicos y la respuesta de la conducta',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'esCorrecta'=>true,
+            'pregunta_id'=>'248'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'A la respuesta que se presenta a cada situación',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'248'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'A los eventos transversales',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'248'
         ]);
         Respuesta::create([
-            'texto'=>'Atención',
+            'texto'=>'A la manifestación conductual',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'248'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿Cuál es el tiempo que dura una emoción?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'Toda la vida',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'249'
+        ]);
+        Respuesta::create([
+            'texto'=>'De 1 a 2 semanas',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'249'
+        ]);
+        Respuesta::create([
+            'texto'=>'De 1 a medio año',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'249'
+        ]);
+        Respuesta::create([
+            'texto'=>'Corta duración',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'249'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'Eterno',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Inteligencia',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Memoria',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Atención',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'249'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿Qué emoción puede generar adrenalina?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'El miedo',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'250'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'La alegría',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'250'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'La sorpresa',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'250'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'La tristeza',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'250'
         ]);
         Respuesta::create([
-            'texto'=>'Atención',
+            'texto'=>'La ira',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'250'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿Qué tipo de emoción puede lograr la pérdida de control de si mismo y sus acciones?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'El miedo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'251'
+        ]);
+        Respuesta::create([
+            'texto'=>'La ira',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'251'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'La tristeza',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'251'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'La aversión',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'251'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'La alegría',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Atención',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'251'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿A qué se denomina sentimientos?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'A la capacidad de dar y recibir amor',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'252'
+        ]);
+        Respuesta::create([
+            'texto'=>'A la capacidad cognitiva de expresar emociones',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'252'
+        ]);
+        Respuesta::create([
+            'texto'=>'A los estados temperamentales',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'252'
+        ]);
+        Respuesta::create([
+            'texto'=>'A todo lo que se puede sentir',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'252'
+        ]);
+        Respuesta::create([
+            'texto'=>'A los estados afectivos mas o menos estables que se enfocan en una persona, idea u objeto',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Pensamiento',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Inteligencia',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Memoria',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Atención',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'252'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿Qué estado afectivo no necesariamente es o será experimentado por una persona?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'El miedo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'253'
+        ]);
+        Respuesta::create([
+            'texto'=>'La tristeza',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'253'
+        ]);
+        Respuesta::create([
+            'texto'=>'La pasión',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'253'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'La ira',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'253'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'Los sentimientos',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Memoria',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Atención',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'253'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿Cuáles son las etapas del desarrollo humano?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'Prenatal, neonatal, lactancia, infancia, niñez, pubertad, adolescencia, juventud, madurez y vejez',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'254'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'Prenatal, posnatal, natalidad, infancia, adolescencia, juventud y vejez',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'254'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'Prenatal, lactancia, infancia, adolescencia, madurez',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'254'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'Nacer, crecer, reproducir y morir ',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'254'
         ]);
         Respuesta::create([
-            'texto'=>'Atención',
+            'texto'=>'Ovular, embrional y fetal',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'254'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => 'Conduce los impulsos nerviosos por todas partes del organismo, es el proceso de:',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'Transformación',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'255'
+        ]);
+        Respuesta::create([
+            'texto'=>'Crecimiento',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'255'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'Mielinización',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'255'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'Evaporización',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'255'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'Desarrollo',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Atención',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'255'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿En qué etapa del desarrollo de conforma la autoconciencia?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'Neonatal',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'256'
+        ]);
+        Respuesta::create([
+            'texto'=>'Lactancia',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'256'
+        ]);
+        Respuesta::create([
+            'texto'=>'Prenatal',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'256'
+        ]);
+        Respuesta::create([
+            'texto'=>'Infancia',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'256'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'Niñez',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Inteligencia',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Memoria',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Atención',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'256'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '.¿Cuál es la etapa donde se desarrolla la capacidad crítica y reflexiva?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'Niñez',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'257'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'Adolescencia',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'257'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'Adultez',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'257'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'Vejez',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'257'
         ]);
         Respuesta::create([
-            'texto'=>'Atención',
+            'texto'=>'Infancia',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'257'
         ]);
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿Cuál es la etapa donde se tiene mayor equilibrio emocional y mejor desarrollo cognitivo?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'Niñez',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'258'
+        ]);
+        Respuesta::create([
+            'texto'=>'Infancia',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'258'
+        ]);
+        Respuesta::create([
+            'texto'=>'Adolescencia',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'258'
+        ]);
+        Respuesta::create([
+            'texto'=>'Adultez',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'258'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'vejez',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Inteligencia',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Memoria',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Atención',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'258'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => 'Dentro de la etapa del adulto maduro, la preocupación se centra en:',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'vivir la vida a plenitud',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'259'
+        ]);
+        Respuesta::create([
+            'texto'=>'sus ingresos económicos y la valorización de su trabajo',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'259'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'encontrar al amor de su vida',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'259'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'viajar por el mundo',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'259'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'tener casa propia',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
-        ]);
-        Respuesta::create([
-            'texto'=>'Atención',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'259'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿A qué edad comienza la etapa del adulto maduro?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'Aproximadamente a partir de los 40 años',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'260'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'Aproximadamente desde los 35',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'260'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
+            'texto'=>'Casi a los 50',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'260'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'Aproximadamente a los 80',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'260'
         ]);
         Respuesta::create([
-            'texto'=>'Atención',
+            'texto'=>'Casi a los 60',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'260'
         ]);
 
         Pregunta::create([
-            'texto' => 'El proceso mediante el cual se transforma la información para extraer conclusiones, se denomina:',
+            'texto' => '¿En qué etapa del desarrollo se pierden las funciones cognitivas y motoras?',
             'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Razonamiento',
+            'texto'=>'La niñez',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'261'
+        ]);
+        Respuesta::create([
+            'texto'=>'La juventud',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'261'
+        ]);
+        Respuesta::create([
+            'texto'=>'La adolescencia',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'261'
+        ]);
+        Respuesta::create([
+            'texto'=>'La madurez',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'261'
+        ]);
+        Respuesta::create([
+            'texto'=>'La vejez',
             'esCorrecta'=>true,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'261'
+        ]);
+
+        Pregunta::create([
+            'texto' => '¿Que estudia la psicología del desarrollo?',
+            'area_id' => '3'
         ]);
         Respuesta::create([
-            'texto'=>'Pensamiento',
+            'texto'=>'los animales y las plantas',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'262'
         ]);
         Respuesta::create([
-            'texto'=>'Inteligencia',
-            'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'texto'=>'cambios físicos, cognitivos y sociales',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'262'
         ]);
         Respuesta::create([
-            'texto'=>'Memoria',
+            'texto'=>'las emociones',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'262'
         ]);
         Respuesta::create([
-            'texto'=>'Atención',
+            'texto'=>'al individuo como ser único',
             'esCorrecta'=>false,
-            'pregunta_id'=>'244'
+            'pregunta_id'=>'262'
+        ]);
+        Respuesta::create([
+            'texto'=>'todas las anteriores.',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'262'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'En el periodo de lactancia su desarrollo social se genera por:',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'La madre',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'263'
+        ]);
+        Respuesta::create([
+            'texto'=>'Los hermanos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'263'
+        ]);
+        Respuesta::create([
+            'texto'=>'Los abuelos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'263'
+        ]);
+        Respuesta::create([
+            'texto'=>'Sus pares',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'263'
+        ]);
+        Respuesta::create([
+            'texto'=>'Los tíos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'263'
+        ]);
+
+        Pregunta::create([
+            'texto' => '¿Como se divide la adultez?',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'Adulto joven y adulto anciano',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'264'
+        ]);
+        Respuesta::create([
+            'texto'=>'A adultez primaria y adultez segundaria',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'264'
+        ]);
+        Respuesta::create([
+            'texto'=>'Adulto inicial y adulto final',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'264'
+        ]);
+        Respuesta::create([
+            'texto'=>'Adulto joven y adulto maduro',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'264'
+        ]);
+        Respuesta::create([
+            'texto'=>'Adulto y adolescente',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'264'
+        ]);
+
+        Pregunta::create([
+            'texto' => '¿Cuáles son los aspectos de las emociones?',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'sentimientos y creatividad',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'265'
+        ]);
+        Respuesta::create([
+            'texto'=>'Expresiones por los sentidos ',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'265'
+        ]);
+        Respuesta::create([
+            'texto'=>'Fisiológicas, expresivas y cognitivas',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'265'
+        ]);
+        Respuesta::create([
+            'texto'=>'A través de canciones y poemas',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'265'
+        ]);
+        Respuesta::create([
+            'texto'=>'Expresiones corporales',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'265'
+        ]);
+
+        Pregunta::create([
+            'texto' => '¿Cuáles son las emociones secundarias?',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'Sorpresa y aversión',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'266'
+        ]);
+        Respuesta::create([
+            'texto'=>'Envidia y avaricia',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'266'
+        ]);
+        Respuesta::create([
+            'texto'=>'Miedo y frustración',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'266'
+        ]);
+        Respuesta::create([
+            'texto'=>'Celos y enojo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'266'
+        ]);
+        Respuesta::create([
+            'texto'=>' Tristeza y amor',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'266'
+        ]);
+
+        Pregunta::create([
+            'texto' => '.Esta parte de la personalidad estaría influida por factores genéticos:',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'El carácter',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'267'
+        ]);
+        Respuesta::create([
+            'texto'=>'Las conductas',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'267'
+        ]);
+        Respuesta::create([
+            'texto'=>'El temperamento',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'267'
+        ]);
+        Respuesta::create([
+            'texto'=>'Las emociones',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'267'
+        ]);
+        Respuesta::create([
+            'texto'=>'Los sentimientos',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'267'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Son tipos de emociones:',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'Enojo, Asco, llanto, exaltación, tristeza, reconciliación',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'268'
+        ]);
+        Respuesta::create([
+            'texto'=>'Ira, Alegría, Miedo, Tristeza, Aversión, lamentación',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'268'
+        ]);
+        Respuesta::create([
+            'texto'=>'Ira, Alegría, Miedo, Tristeza, Sorpresa, Aversión',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'268'
+        ]);
+        Respuesta::create([
+            'texto'=>'Alegría, Llanto, Miedo, Rencor, Sorpresa, Enojo',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'268'
+        ]);
+        Respuesta::create([
+            'texto'=>'Alegría, Miedo, Tristeza, Sorpresa, Ira, Envidia',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'268'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Se considera que es una combinación entre emoción y sentimientos:',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'El amor',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'269'
+        ]);
+        Respuesta::create([
+            'texto'=>'La pasión',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'269'
+        ]);
+        Respuesta::create([
+            'texto'=>'El afecto',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'269'
+        ]);
+        Respuesta::create([
+            'texto'=>'La personalidad',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'269'
+        ]);
+        Respuesta::create([
+            'texto'=>'La tristeza',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'269'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'Se manifiesta de según las necesidades y deseos, o el modo particular que decide actuar:',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'El temperamento',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'270'
+        ]);
+        Respuesta::create([
+            'texto'=>'El carácter',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'270'
+        ]);
+        Respuesta::create([
+            'texto'=>'El afecto',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'270'
+        ]);
+        Respuesta::create([
+            'texto'=>'La personalidad',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'270'
+        ]);
+        Respuesta::create([
+            'texto'=>'El amor',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'270'
+        ]);
+
+        Pregunta::create([
+            'texto' => 'La palabra adolescencia viene de:',
+            'area_id' => '3'
+        ]);
+        Respuesta::create([
+            'texto'=>'adolescente',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'271'
+        ]);
+        Respuesta::create([
+            'texto'=>'Adolecer',
+            'esCorrecta'=>true,
+            'pregunta_id'=>'271'
+        ]);
+        Respuesta::create([
+            'texto'=>'aborrecer',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'271'
+        ]);
+        Respuesta::create([
+            'texto'=>'cambios de la pubertad',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'271'
+        ]);
+        Respuesta::create([
+            'texto'=>'cambios físicos de la pubertad',
+            'esCorrecta'=>false,
+            'pregunta_id'=>'271'
         ]);
     }
 }
